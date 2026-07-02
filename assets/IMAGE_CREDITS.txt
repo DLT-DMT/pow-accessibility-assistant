@@ -1,0 +1,14 @@
+Prince of Wales Theatre exterior photo
+
+File: Prince of Wales Theatre 01.jpg
+Author: Bernard Gagnon
+Source: Wikimedia Commons
+Page: https://commons.wikimedia.org/wiki/File:Prince_of_Wales_Theatre_01.jpg
+Original file: https://upload.wikimedia.org/wikipedia/commons/a/ab/Prince_of_Wales_Theatre_01.jpg
+License: CC BY-SA 3.0 Unported / GFDL
+License URL: https://creativecommons.org/licenses/by-sa/3.0/
+
+Local app asset:
+assets/prince-of-wales-theatre-900.jpg
+
+The local asset is a resized JPEG derived from the original file for app performance.

@@ -1,0 +1,1 @@
+globalThis.POW_APP_VERSION = "1.0.0";

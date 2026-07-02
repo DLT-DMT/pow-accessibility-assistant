@@ -126,12 +126,15 @@ This is the URL to share with staff.
 
 1. Open the GitHub Pages URL.
 2. Confirm the app loads.
-3. Confirm the default profile is **No Accessibility Requirements**.
-4. Switch to **Rollator**.
-5. Switch to **Wheelchair**.
-6. Search for a track.
-7. Open a track detail.
-8. Confirm the version number appears in the footer.
+3. Confirm the first screen says **Theatre**.
+4. Continue to **About Me**.
+5. Confirm the default mobility is **No Accessibility Requirements**.
+6. Choose a track.
+7. Continue to **Supporting Another Colleague?**.
+8. Choose **No** and press **Start Shift**.
+9. Confirm **My Shift Tonight** appears.
+10. Go back and test **Yes** with a supporting track and mobility.
+11. Confirm the version number is `2.0.0`.
 
 ### iPhone Install Test
 
@@ -143,7 +146,7 @@ This is the URL to share with staff.
 6. Tap **Add**.
 7. Open the app from the Home Screen.
 8. Confirm the install guide no longer appears.
-9. Confirm the app still shows tracks and details.
+9. Confirm the app still opens to the guided workflow.
 
 ### Android Install Test
 
@@ -155,7 +158,7 @@ This is the URL to share with staff.
 6. Confirm the installation.
 7. Open the app from the phone launcher.
 8. Confirm the install guide no longer appears.
-9. Confirm the app still shows tracks and details.
+9. Confirm the app still opens to the guided workflow.
 
 ## 7. Test Offline Mode
 
@@ -167,9 +170,9 @@ Do this after installing the app on a phone.
 4. Turn off mobile data.
 5. Close the app.
 6. Reopen the app from the Home Screen.
-7. Confirm the track list loads.
-8. Confirm search works.
-9. Confirm track details open.
+7. Confirm the Theatre screen loads.
+8. Continue through the setup screens.
+9. Confirm My Shift Tonight opens.
 
 ## 8. Publish Future Updates
 
@@ -180,10 +183,10 @@ For each future release:
 3. Increase the version number, for example:
 
 ```js
-globalThis.POW_APP_VERSION = "1.0.1";
+globalThis.POW_APP_VERSION = "2.0.1";
 ```
 
-4. If the track data changes, replace `data/tracks-data.js`.
+4. If the master data changes, replace `data/master-data.js` and `data/master-data.json`.
 5. Upload the changed files to GitHub.
 6. Commit the changes.
 7. Wait for GitHub Pages to publish.

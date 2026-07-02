@@ -1,6 +1,6 @@
 importScripts("./version.js");
 
-const APP_VERSION = globalThis.POW_APP_VERSION || "1.0.0";
+const APP_VERSION = globalThis.POW_APP_VERSION || "2.0.0";
 const CACHE_NAME = `pow-accessibility-assistant-${APP_VERSION}`;
 
 const APP_FILES = [
@@ -10,8 +10,8 @@ const APP_FILES = [
   "./version.js",
   "./app.js",
   "./manifest.json",
-  "./data/tracks-data.js",
-  "./data/tracks.json",
+  "./data/master-data.js",
+  "./data/master-data.json",
   "./assets/prince-of-wales-theatre-900.jpg",
   "./icons/icon.svg",
   "./icons/icon-192.png",

@@ -15,7 +15,7 @@
   </head>
   <body>
     <main class="app-shell">
-      <section class="top-bar">
+      <header class="top-bar">
         <div class="brand-row">
           <img
             alt="Prince of Wales Theatre exterior on Coventry Street"
@@ -27,14 +27,16 @@
           <div>
             <p class="venue">Prince of Wales Theatre</p>
             <h1>Accessibility Assistant</h1>
-            <p class="production">The Book of Mormon</p>
+            <p class="production">My Shift Tonight</p>
           </div>
         </div>
+        <div class="release-pill" id="versionLabel">Version 2.0.0</div>
+      </header>
 
-        <div class="mode-switch" aria-label="Accessibility profile" id="profileControls"></div>
+      <section class="update-panel" hidden id="updatePanel">
+        <p>A new version is available.</p>
+        <button class="primary-action" id="updateButton" type="button">Update</button>
       </section>
-
-      <section class="summary-strip" aria-label="Status totals" id="summaryStrip"></section>
 
       <section class="install-panel" hidden id="installPanel">
         <div>
@@ -47,39 +49,22 @@
         </button>
       </section>
 
-      <section class="update-panel" hidden id="updatePanel">
-        <p>A new version is available.</p>
-        <button class="primary-action" id="updateButton" type="button">Update</button>
+      <nav class="step-tabs" aria-label="Shift setup progress" id="stepTabs"></nav>
+
+      <section class="workflow" id="workflow" aria-live="polite">
+        <div class="empty-state">
+          <p>Loading shift data</p>
+        </div>
       </section>
-
-      <section class="filters">
-        <label class="search-field">
-          <span>Search</span>
-          <input
-            autocomplete="off"
-            id="searchInput"
-            placeholder="Track, task, barrier, adjustment"
-            type="search"
-          >
-        </label>
-
-        <div class="filter-row" aria-label="Status filter" id="statusFilters"></div>
-      </section>
-
-      <div class="content-grid">
-        <section class="track-list" aria-label="Tracks" id="trackList"></section>
-        <section class="detail-panel" aria-label="Track detail" id="trackDetail"></section>
-      </div>
 
       <footer class="credits">
-        <span id="versionLabel">Version 1.0.0</span>
         <button class="text-action" id="installHelpButton" type="button">Install guide</button>
         <span>Photo: Bernard Gagnon, Wikimedia Commons, CC BY-SA 3.0 / GFDL.</span>
       </footer>
     </main>
 
     <script src="./version.js"></script>
-    <script src="./data/tracks-data.js"></script>
+    <script src="./data/master-data.js"></script>
     <script src="./app.js" defer></script>
   </body>
 </html>

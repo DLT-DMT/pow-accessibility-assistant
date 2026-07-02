@@ -2,7 +2,7 @@
   "name": "Prince of Wales Accessibility Assistant",
   "short_name": "POW Access",
   "id": "./",
-  "description": "Offline FOH accessibility track assistant for the Prince of Wales Theatre.",
+  "description": "Offline FOH shift assistant for Prince of Wales Theatre accessibility workflows.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

@@ -1,8 +1,16 @@
 # Prince of Wales Accessibility Assistant
 
-Static offline PWA for daily Front of House accessibility track checks.
+Static offline PWA for guided Front of House shift support.
 
-Version: `1.0.0`
+Version: `2.0.0`
+
+## What Changed In Version 2
+
+- Guided setup: Theatre, About Me, Supporting Another Colleague, My Shift.
+- Uses refined Version 2 master data instead of the Version 1 track JSON.
+- Builds one running order from the selected track and mobility profile.
+- Adds only the relevant support tasks for another colleague's selected track and mobility.
+- Keeps the static offline architecture for GitHub Pages and iPhone Home Screen use.
 
 ## Structure
 
@@ -10,12 +18,12 @@ Version: `1.0.0`
 - `DEPLOYMENT_GUIDE.md` - step-by-step GitHub Pages publishing guide
 - `index.html` - app shell
 - `style.css` - visual styling
-- `app.js` - search, filtering and profile rendering
+- `app.js` - guided workflow and shift rendering
 - `manifest.json` - installable PWA metadata
 - `service-worker.js` - offline cache
 - `version.js` - release version used by the app and service worker
-- `data/tracks.json` - accessibility and standard track data
-- `data/tracks-data.js` - browser-safe local data file used by the app
+- `data/master-data.json` - refined Version 2 app data
+- `data/master-data.js` - browser-safe local data file used by the app
 - `assets/` - theatre image and attribution
 - `icons/` - PWA icons
 
@@ -31,22 +39,22 @@ The target host is GitHub Pages with:
 
 ## Updating Data
 
-For Version 1 portability, the app reads `data/tracks-data.js` first.
+The app reads `data/master-data.js` first so it works when `index.html` is opened directly from the folder.
 
-To update the data, replace `data/tracks-data.js` with the same global variable name:
+To update the data, replace `data/master-data.js` with the same global variable name:
 
 ```js
-window.POW_ACCESSIBILITY_DATA = { ... };
+window.POW_MASTER_DATA = { ... };
 ```
 
-`data/tracks.json` is kept as an editable source/export copy.
+`data/master-data.json` is kept as an editable source/export copy.
 
 ## Updating The App Version
 
 For every release, edit `version.js`:
 
 ```js
-globalThis.POW_APP_VERSION = "1.0.1";
+globalThis.POW_APP_VERSION = "2.0.1";
 ```
 
 Installed users will be offered an update after GitHub Pages publishes the new files and they open the app while online.
@@ -66,16 +74,3 @@ No local server is required.
 5. Tap Add to Home Screen.
 6. Open the installed app once while online.
 7. It will then continue to work offline.
-
-## Offline Notes
-
-The app can be used by double-clicking `index.html`.
-
-For iPhone Home Screen installation, Safari still requires the app to be opened from HTTPS once so the PWA service worker can be installed.
-
-After installation and first load:
-
-- Node.js is not required.
-- A server is not required for daily use.
-- Cloudflare, Vinext and Next.js are not required.
-- The cached app shell, data, image and icons continue to work offline.

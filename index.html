@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0d2b45">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="POW Access">
+    <meta name="apple-mobile-web-app-title" content="DMT Guide">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Prince of Wales Accessibility Assistant</title>
+    <title>DMT FOH Shift Guide</title>
     <link rel="manifest" href="./manifest.json">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
     <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
@@ -21,16 +21,21 @@
             alt="Prince of Wales Theatre exterior on Coventry Street"
             class="brand-image"
             height="72"
-            src="./assets/prince-of-wales-theatre-900.jpg"
+            src="./assets/prince-of-wales-theatre-tower.jpg"
             width="72"
           >
           <div>
-            <p class="venue">Prince of Wales Theatre</p>
-            <h1>Accessibility Assistant</h1>
-            <p class="production">My Shift Tonight</p>
+            <p class="venue">Delfont Mackintosh Theatres</p>
+            <h1>DMT FOH Shift Guide</h1>
+            <p class="production">Prince of Wales Theatre</p>
           </div>
         </div>
-        <div class="release-pill" id="versionLabel">Version 2.0.0</div>
+        <div class="release-tools">
+          <div class="release-pill" id="versionLabel">Version 3.0.0</div>
+          <button class="text-action release-link" id="releaseNotesButton" type="button">
+            What's New
+          </button>
+        </div>
       </header>
 
       <section class="update-panel" hidden id="updatePanel">
@@ -57,9 +62,19 @@
         </div>
       </section>
 
+      <dialog class="release-dialog" id="releaseDialog">
+        <form method="dialog">
+          <div class="release-dialog-header">
+            <h2>What's New</h2>
+            <button class="text-action" type="submit">Close</button>
+          </div>
+          <div class="release-notes-content"></div>
+        </form>
+      </dialog>
+
       <footer class="credits">
         <button class="text-action" id="installHelpButton" type="button">Install guide</button>
-        <span>Photo: Bernard Gagnon, Wikimedia Commons, CC BY-SA 3.0 / GFDL.</span>
+        <span>DMT FOH Shift Guide. Photo crop: Bernard Gagnon, Wikimedia Commons, CC BY-SA 3.0 / GFDL.</span>
       </footer>
     </main>
 

@@ -1,7 +1,7 @@
 importScripts("./version.js");
 
-const APP_VERSION = globalThis.POW_APP_VERSION || "2.0.0";
-const CACHE_NAME = `pow-accessibility-assistant-${APP_VERSION}`;
+const APP_VERSION = globalThis.POW_APP_VERSION || "3.0.0";
+const CACHE_NAME = `dmt-foh-shift-guide-${APP_VERSION}`;
 
 const APP_FILES = [
   "./",
@@ -12,7 +12,7 @@ const APP_FILES = [
   "./manifest.json",
   "./data/master-data.js",
   "./data/master-data.json",
-  "./assets/prince-of-wales-theatre-900.jpg",
+  "./assets/prince-of-wales-theatre-tower.jpg",
   "./icons/icon.svg",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

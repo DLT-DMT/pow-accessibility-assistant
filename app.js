@@ -1,4 +1,33 @@
 const DEFAULT_PROFILE = "standard";
+const DEFAULT_SUPPORT_PROFILE = "rollator";
+const APP_VERSION_FALLBACK = "3.0.0";
+
+const RELEASE_NOTES = [
+  {
+    version: "3.0.0",
+    items: [
+      "Renamed the app to DMT FOH Shift Guide.",
+      "Added track overview cards with RAG status and counters.",
+      "Expanded cleaning references into operational cleaning task lists.",
+      "Added Quick Reference for 999 calls, muster points, and radio codes.",
+      "Added release notes beside the version number.",
+    ],
+  },
+  {
+    version: "2.0.0",
+    items: [
+      "Added guided setup for theatre, profile, support, and shift view.",
+      "Moved the app onto refined master data.",
+      "Added support-task filtering for another colleague's track and mobility.",
+    ],
+  },
+  {
+    version: "1.0.0",
+    items: [
+      "Created the first portable offline assistant from the workbook data.",
+    ],
+  },
+];
 
 let deferredInstallPrompt = null;
 let waitingServiceWorker = null;
@@ -21,6 +50,8 @@ const elements = {
   installHelpButton: document.querySelector("#installHelpButton"),
   installPanel: document.querySelector("#installPanel"),
   installSteps: document.querySelector("#installSteps"),
+  releaseDialog: document.querySelector("#releaseDialog"),
+  releaseNotesButton: document.querySelector("#releaseNotesButton"),
   stepTabs: document.querySelector("#stepTabs"),
   updateButton: document.querySelector("#updateButton"),
   updatePanel: document.querySelector("#updatePanel"),
@@ -28,7 +59,7 @@ const elements = {
   workflow: document.querySelector("#workflow"),
 };
 
-const stepLabels = ["Theatre", "About Me", "Support", "My Shift"];
+const stepLabels = ["Theatre", "About Me", "Support", "My Shift", "Quick Reference"];
 
 window.addEventListener("beforeinstallprompt", (event) => {
   event.preventDefault();
@@ -51,10 +82,12 @@ async function init() {
     state.data.profiles.sort((a, b) => a.sortOrder - b.sortOrder);
     state.data.tracks.sort((a, b) => a.number - b.number);
     state.data.baselineTasks.sort((a, b) => a.sequence - b.sequence);
+    state.data.cleaningAssignments?.sort((a, b) => a.id.localeCompare(b.id));
 
     state.theatreId = state.data.theatres[0]?.id || "";
     state.trackId = getTracksForTheatre()[0]?.id || "";
     state.supportTrackId = state.trackId;
+    state.supportProfileId = DEFAULT_SUPPORT_PROFILE;
 
     elements.androidInstallButton.addEventListener("click", installAndroidApp);
     elements.installHelpButton.addEventListener("click", () => {
@@ -63,6 +96,12 @@ async function init() {
       elements.installPanel.scrollIntoView({ behavior: "smooth", block: "start" });
     });
     elements.updateButton.addEventListener("click", applyAvailableUpdate);
+    elements.releaseNotesButton.addEventListener("click", showReleaseNotes);
+    elements.releaseDialog.querySelector("form").addEventListener("submit", () => {
+      if (typeof elements.releaseDialog.close !== "function") {
+        elements.releaseDialog.removeAttribute("open");
+      }
+    });
 
     updateVersionLabel();
     render();
@@ -88,8 +127,35 @@ async function loadMasterData() {
 }
 
 function updateVersionLabel() {
-  const version = globalThis.POW_APP_VERSION || state.data?.meta?.version || "2.0.0";
+  const version = globalThis.POW_APP_VERSION || state.data?.meta?.version || APP_VERSION_FALLBACK;
   elements.versionLabel.textContent = `Version ${version}`;
+}
+
+function showReleaseNotes() {
+  if (!elements.releaseDialog) {
+    return;
+  }
+  const content = elements.releaseDialog.querySelector(".release-notes-content");
+  content.replaceChildren(
+    ...RELEASE_NOTES.map((release) => {
+      const section = document.createElement("section");
+      const heading = document.createElement("h3");
+      heading.textContent = `Version ${release.version}`;
+      const list = document.createElement("ul");
+      release.items.forEach((item) => {
+        const row = document.createElement("li");
+        row.textContent = item;
+        list.append(row);
+      });
+      section.append(heading, list);
+      return section;
+    }),
+  );
+  if (typeof elements.releaseDialog.showModal === "function") {
+    elements.releaseDialog.showModal();
+  } else {
+    elements.releaseDialog.setAttribute("open", "");
+  }
 }
 
 function renderError() {
@@ -107,8 +173,10 @@ function render() {
     elements.workflow.append(renderAboutScreen());
   } else if (state.step === 3) {
     elements.workflow.append(renderSupportScreen());
-  } else {
+  } else if (state.step === 4) {
     elements.workflow.append(renderShiftScreen());
+  } else {
+    elements.workflow.append(renderQuickReferenceScreen());
   }
 
   updateInstallGuide();
@@ -133,7 +201,7 @@ function renderStepTabs() {
 }
 
 function renderTheatreScreen() {
-  const panel = createPanel("Theatre", "Select theatre");
+  const panel = createPanel("Theatre", "Venue");
   const theatreList = document.createElement("div");
   theatreList.className = "option-stack";
 
@@ -171,19 +239,19 @@ function renderTheatreScreen() {
 function renderAboutScreen() {
   const panel = createPanel("About Me", "My allocation");
   panel.append(
-    createSelectField(
-      "Select My Track",
-      state.trackId,
-      getTracksForTheatre().map((track) => ({ value: track.id, label: track.name })),
-      (value) => {
-        state.trackId = value;
-        if (!state.supportTrackId) {
-          state.supportTrackId = value;
-        }
-      },
-    ),
-    createProfileControl("Select My Mobility", state.profileId, (profileId) => {
+    createProfileControl("Select My Working Profile", state.profileId, (profileId) => {
       state.profileId = profileId;
+    }),
+    renderTrackOverview({
+      profileId: state.profileId,
+      selectedTrackId: state.trackId,
+      onSelect: (trackId) => {
+        state.trackId = trackId;
+        if (!state.supportTrackId) {
+          state.supportTrackId = trackId;
+        }
+        goToStep(3);
+      },
     }),
     createActionRow([
       createButton("Back", "secondary-action", () => goToStep(1)),
@@ -207,6 +275,9 @@ function renderSupportScreen() {
       if (!state.supportTrackId) {
         state.supportTrackId = state.trackId;
       }
+      if (state.supportProfileId === DEFAULT_PROFILE) {
+        state.supportProfileId = DEFAULT_SUPPORT_PROFILE;
+      }
       render();
     }),
   );
@@ -214,16 +285,16 @@ function renderSupportScreen() {
 
   if (state.supporting) {
     panel.append(
-      createSelectField(
-        "Supporting Track",
-        state.supportTrackId,
-        getTracksForTheatre().map((track) => ({ value: track.id, label: track.name })),
-        (value) => {
-          state.supportTrackId = value;
-        },
-      ),
-      createProfileControl("Supporting Mobility", state.supportProfileId, (profileId) => {
+      createProfileControl("Supported Working Profile", state.supportProfileId, (profileId) => {
         state.supportProfileId = profileId;
+      }, ["rollator", "wheelchair"]),
+      renderTrackOverview({
+        profileId: state.supportProfileId,
+        selectedTrackId: state.supportTrackId,
+        onSelect: (trackId) => {
+          state.supportTrackId = trackId;
+        },
+        title: "Select Supported Track",
       }),
     );
   }
@@ -233,6 +304,64 @@ function renderSupportScreen() {
     createButton("Start Shift", "primary-action", () => goToStep(4)),
   ]));
   return panel;
+}
+
+function renderTrackOverview({ profileId, selectedTrackId, onSelect, title = "Select Allocated Track" }) {
+  const wrapper = document.createElement("section");
+  wrapper.className = "track-overview";
+
+  const heading = document.createElement("div");
+  heading.className = "track-overview-heading";
+  const label = document.createElement("span");
+  label.className = "panel-label";
+  label.textContent = title;
+  const profile = document.createElement("strong");
+  profile.textContent = `${profileIcon(profileId)} ${getProfile(profileId)?.label || ""}`;
+  heading.append(label, profile);
+  wrapper.append(heading);
+
+  const grid = document.createElement("div");
+  grid.className = "track-card-grid";
+  getTracksForTheatre().forEach((track) => {
+    const access = getTrackAccessibility(track.id, profileId);
+    const statusId = access?.statusId || "review_required";
+    const status = access?.status || "Review Required";
+    const counters = getTrackStatusCounters(track.id, profileId);
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = selectedTrackId === track.id
+      ? `track-card active ${statusClass(statusId)}`
+      : `track-card ${statusClass(statusId)}`;
+    button.setAttribute("aria-pressed", String(selectedTrackId === track.id));
+    button.addEventListener("click", () => onSelect(track.id));
+
+    const top = document.createElement("div");
+    top.className = "track-card-top";
+    const name = document.createElement("strong");
+    name.textContent = track.name;
+    const rag = document.createElement("span");
+    rag.className = `rag-indicator ${statusClass(statusId)}`;
+    rag.textContent = ragLabel(statusId);
+    top.append(name, rag);
+
+    const statusLine = document.createElement("p");
+    statusLine.className = "track-card-status";
+    statusLine.textContent = status;
+
+    const counterRow = document.createElement("div");
+    counterRow.className = "counter-row";
+    counterRow.append(
+      createCounterChip("Suitable", counters.suitable),
+      createCounterChip("Adjust", counters.adjust),
+      createCounterChip("Not", counters.not),
+    );
+
+    button.append(top, statusLine, counterRow);
+    grid.append(button);
+  });
+
+  wrapper.append(grid);
+  return wrapper;
 }
 
 function renderShiftScreen() {
@@ -257,7 +386,7 @@ function renderShiftScreen() {
   title.textContent = track?.name || "Selected track";
   const subtitle = document.createElement("p");
   subtitle.className = "muted";
-  subtitle.textContent = profile?.label || "No Accessibility Requirements";
+  subtitle.textContent = `${profileIcon(state.profileId)} ${profile?.label || "Standard Duties"}`;
   headingBlock.append(eyebrow, title, subtitle);
 
   header.append(headingBlock);
@@ -285,11 +414,12 @@ function renderShiftScreen() {
   panel.append(runningOrder);
   panel.append(createActionRow([
     createButton("Change details", "secondary-action", () => goToStep(2)),
+    createButton("Quick Reference", "secondary-action", () => goToStep(5)),
     createButton("Start again", "text-action", () => {
       state.step = 1;
       state.profileId = DEFAULT_PROFILE;
       state.supporting = false;
-      state.supportProfileId = DEFAULT_PROFILE;
+      state.supportProfileId = DEFAULT_SUPPORT_PROFILE;
       render();
     }),
   ]));
@@ -301,11 +431,11 @@ function renderShiftSummary(track, profile, supportTrack, supportProfile, suppor
   summary.className = "summary-grid";
   summary.append(
     createSummaryTile("Track", track?.name || ""),
-    createSummaryTile("Mobility", profile?.label || ""),
+    createSummaryTile("Profile", `${profileIcon(state.profileId)} ${profile?.label || ""}`),
     createSummaryTile("Support tasks", String(supportTasks.length)),
   );
   if (supportTrack && supportProfile && state.supportProfileId !== DEFAULT_PROFILE) {
-    summary.append(createSummaryTile("Supporting", `${supportTrack.name} - ${supportProfile.label}`));
+    summary.append(createSummaryTile("Supporting", `${profileIcon(state.supportProfileId)} ${supportTrack.name}`));
   }
   return summary;
 }
@@ -322,6 +452,69 @@ function renderTrackStatus(access) {
   summary.textContent = access.summary || access.requiredAdjustment;
   card.append(label, status, summary);
   return card;
+}
+
+function renderQuickReferenceScreen() {
+  const panel = createPanel("Quick Reference", "Operational aide memoire");
+  panel.append(
+    createReferenceSection("Calling 999", [
+      "Reason for the call.",
+      "Your name.",
+      "Building name and address.",
+      "Floor / room number, if known.",
+      "Whether people remain inside the building.",
+      "Remain on the telephone until instructed otherwise.",
+    ]),
+    createReferenceSection("Muster Points", [
+      "Muster Point 1: The Londoner Hotel, Leicester Square.",
+      "Muster Point 2: The Imperial Bar, Leicester Square.",
+      "Muster Point 3: Any safe Delfont Mackintosh Theatres venue that can be reached safely.",
+    ]),
+    createRadioCodesSection(),
+    createActionRow([
+      createButton("Back to Shift", "secondary-action", () => goToStep(4)),
+      createButton("Change details", "text-action", () => goToStep(2)),
+    ]),
+  );
+  return panel;
+}
+
+function createReferenceSection(titleText, items) {
+  const section = document.createElement("section");
+  section.className = "reference-section";
+  const title = document.createElement("h3");
+  title.textContent = titleText;
+  const list = document.createElement("ul");
+  items.forEach((item) => {
+    const row = document.createElement("li");
+    row.textContent = item;
+    list.append(row);
+  });
+  section.append(title, list);
+  return section;
+}
+
+function createRadioCodesSection() {
+  const section = document.createElement("section");
+  section.className = "reference-section";
+  const title = document.createElement("h3");
+  title.textContent = "Radio Codes";
+  const codes = document.createElement("div");
+  codes.className = "radio-code-grid";
+  [
+    ["Mr Jet", "Fire"],
+    ["Ms Green", "Urgent Security Response"],
+  ].forEach(([code, meaning]) => {
+    const item = document.createElement("article");
+    const codeText = document.createElement("strong");
+    codeText.textContent = code;
+    const meaningText = document.createElement("span");
+    meaningText.textContent = meaning;
+    item.append(codeText, meaningText);
+    codes.append(item);
+  });
+  section.append(title, codes);
+  return section;
 }
 
 function renderPhaseCard(phase) {
@@ -347,12 +540,31 @@ function renderPhaseCard(phase) {
   card.append(header);
 
   if (ownTasks.length) {
-    const list = document.createElement("ol");
-    list.className = "task-list";
+    const list = document.createElement("div");
+    list.className = "task-stack";
+    const renderedCleaningAreas = new Set();
     ownTasks.forEach((task) => {
-      const item = document.createElement("li");
-      item.textContent = task.text;
-      list.append(item);
+      const visibleText = stripCleaningReference(task.text);
+      const cleaningAreaIds = task.cleaningAreaIds?.length
+        ? task.cleaningAreaIds
+        : inferCleaningAreaIds(task.text);
+
+      if (visibleText && !isAreaOnlyTask(visibleText, cleaningAreaIds)) {
+        list.append(createTaskItem(visibleText));
+      }
+
+      cleaningAreaIds.forEach((areaId) => {
+        const key = `${phase.id}:${areaId}`;
+        if (renderedCleaningAreas.has(key)) {
+          return;
+        }
+        const assignments = getCleaningAssignments(state.trackId, phase.id, areaId);
+        if (!assignments.length) {
+          return;
+        }
+        renderedCleaningAreas.add(key);
+        list.append(renderCleaningBlock(areaId, assignments));
+      });
     });
     card.append(list);
   }
@@ -422,15 +634,17 @@ function createSelectField(labelText, value, options, onChange) {
   return label;
 }
 
-function createProfileControl(labelText, selectedProfileId, onChange) {
+function createProfileControl(labelText, selectedProfileId, onChange, allowedProfileIds = null) {
   const wrapper = document.createElement("div");
   wrapper.className = "field";
   const label = document.createElement("span");
   label.textContent = labelText;
   const controls = document.createElement("div");
   controls.className = "profile-grid";
-  state.data.profiles.forEach((profile) => {
-    controls.append(createSegmentButton(profile.label, profile.id === selectedProfileId, () => {
+  state.data.profiles
+    .filter((profile) => !allowedProfileIds || allowedProfileIds.includes(profile.id))
+    .forEach((profile) => {
+    controls.append(createSegmentButton(`${profileIcon(profile.id)} ${profile.label}`, profile.id === selectedProfileId, () => {
       onChange(profile.id);
       render();
     }));
@@ -476,6 +690,36 @@ function createSummaryTile(label, value) {
   return tile;
 }
 
+function createCounterChip(label, value) {
+  const chip = document.createElement("span");
+  chip.className = "counter-chip";
+  chip.textContent = `${label} ${value}`;
+  return chip;
+}
+
+function createTaskItem(text) {
+  const item = document.createElement("div");
+  item.className = "task-item";
+  item.textContent = text;
+  return item;
+}
+
+function renderCleaningBlock(areaId, assignments) {
+  const area = getCleaningArea(areaId);
+  const block = document.createElement("section");
+  block.className = "cleaning-block";
+  const heading = document.createElement("h4");
+  heading.textContent = area?.name || "Cleaning Location";
+  const list = document.createElement("ul");
+  uniqueByText(assignments).forEach((assignment) => {
+    const row = document.createElement("li");
+    row.textContent = assignment.text;
+    list.append(row);
+  });
+  block.append(heading, list);
+  return block;
+}
+
 function createStatusPill(label, statusId) {
   const pill = document.createElement("span");
   pill.className = `status-pill ${statusClass(statusId)}`;
@@ -510,6 +754,12 @@ function getProfile(profileId) {
   return state.data.profiles.find((profile) => profile.id === profileId);
 }
 
+function profileIcon(profileId) {
+  if (profileId === "rollator") return "🦯";
+  if (profileId === "wheelchair") return "🦽";
+  return "👟";
+}
+
 function getTrackAccessibility(trackId, profileId) {
   return state.data.trackAccessibility.find(
     (item) => item.trackId === trackId && item.profileId === profileId,
@@ -528,10 +778,51 @@ function getPhaseAccessibility(trackId, phaseId, profileId) {
   );
 }
 
+function getTrackStatusCounters(trackId, profileId) {
+  if (profileId === DEFAULT_PROFILE) {
+    const phasesWithTasks = new Set(
+      state.data.baselineTasks
+        .filter((task) => task.trackId === trackId)
+        .map((task) => task.phaseId),
+    );
+    return { suitable: phasesWithTasks.size, adjust: 0, not: 0 };
+  }
+
+  return state.data.phaseAccessibility
+    .filter((item) => item.trackId === trackId && item.profileId === profileId)
+    .reduce((counts, item) => {
+      if (item.statusId === "suitable") {
+        counts.suitable += 1;
+      } else if (item.statusId === "not_suitable") {
+        counts.not += 1;
+      } else if (item.statusId !== "not_applicable") {
+        counts.adjust += 1;
+      }
+      return counts;
+    }, { suitable: 0, adjust: 0, not: 0 });
+}
+
 function getOwnTasksForPhase(phaseId) {
   return state.data.baselineTasks.filter(
     (task) => task.trackId === state.trackId && task.phaseId === phaseId,
   );
+}
+
+function getCleaningArea(areaId) {
+  return state.data.cleaningAreas?.find((area) => area.id === areaId);
+}
+
+function getCleaningAssignments(trackId, phaseId, areaId) {
+  return (state.data.cleaningAssignments || []).filter((assignment) => {
+    if (assignment.areaId !== areaId) return false;
+    if (assignment.phaseId !== phaseId) return false;
+    if (assignment.assigneeType === "not_applicable") return false;
+    return (
+      assignment.matchedTrackId === trackId ||
+      assignment.assigneeType === "all_tracks" ||
+      assignment.assigneeType === "location"
+    );
+  });
 }
 
 function getSupportTasksForPhase(phaseId, ownTasks = []) {
@@ -560,6 +851,62 @@ function shouldShowAssessment(phaseAccess) {
     return false;
   }
   return phaseAccess.statusId !== "suitable" || phaseAccess.supportRequired;
+}
+
+function stripCleaningReference(text) {
+  return String(text || "")
+    .replace(/cleaning schedule reference:\s*/gi, "")
+    .replace(/\bsee\s+[^.]*cleaning\s+(sheet|sheets|tasks)\.?/gi, "")
+    .replace(/\s*-\s*$/g, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+function inferCleaningAreaIds(text) {
+  const source = String(text || "").toLowerCase().replace("folies", "follies");
+  if (!/(cleaning schedule reference|see\s+[^.]*cleaning)/.test(source)) {
+    return [];
+  }
+
+  const reference = source.match(/see\s+([^.]*)cleaning/);
+  const target = reference?.[1] || source;
+  const areaIds = [];
+  if (target.includes("delfont")) areaIds.push("clean_delfont");
+  if (target.includes("american")) areaIds.push("clean_american");
+  if (target.includes("follies") || target.includes("erte") || target.includes("foyer")) {
+    areaIds.push("clean_follies");
+  }
+  return [...new Set(areaIds)];
+}
+
+function isAreaOnlyTask(text, areaIds) {
+  const normalized = normalizeTaskText(text);
+  if (!normalized || !areaIds.length) {
+    return false;
+  }
+  return areaIds.some((areaId) => {
+    const area = getCleaningArea(areaId);
+    return normalizeTaskText(area?.name) === normalized;
+  });
+}
+
+function uniqueByText(items) {
+  const seen = new Set();
+  return items.filter((item) => {
+    const key = normalizeTaskText(item.text);
+    if (!key || seen.has(key)) {
+      return false;
+    }
+    seen.add(key);
+    return true;
+  });
+}
+
+function ragLabel(statusId) {
+  if (statusId === "suitable") return "Green";
+  if (statusId === "not_suitable") return "Red";
+  if (statusId === "review_required") return "Review";
+  return "Amber";
 }
 
 function normalizeTaskText(text) {

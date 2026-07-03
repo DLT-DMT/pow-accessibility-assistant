@@ -1,4 +1,4 @@
-# Prince of Wales Accessibility Assistant
+# DMT FOH Shift Guide
 ## GitHub Pages Deployment Guide
 
 This guide assumes you have never used GitHub before.
@@ -67,7 +67,7 @@ pow-accessibility-pwa
 8. In **Commit message**, type:
 
 ```text
-Add Prince of Wales Accessibility Assistant
+Add DMT FOH Shift Guide
 ```
 
 9. Click **Commit changes**.
@@ -128,13 +128,15 @@ This is the URL to share with staff.
 2. Confirm the app loads.
 3. Confirm the first screen says **Theatre**.
 4. Continue to **About Me**.
-5. Confirm the default mobility is **No Accessibility Requirements**.
-6. Choose a track.
-7. Continue to **Supporting Another Colleague?**.
-8. Choose **No** and press **Start Shift**.
-9. Confirm **My Shift Tonight** appears.
-10. Go back and test **Yes** with a supporting track and mobility.
-11. Confirm the version number is `2.0.0`.
+5. Confirm the default working profile is **Standard Duties**.
+6. Confirm the track overview cards appear.
+7. Choose a track.
+8. Continue to **Supporting Another Colleague?**.
+9. Choose **No** and press **Start Shift**.
+10. Confirm **My Shift Tonight** appears.
+11. Open **Quick Reference**.
+12. Go back and test **Yes** with a supported track and mobility.
+13. Confirm the version number is `3.0.0`.
 
 ### iPhone Install Test
 
@@ -183,7 +185,7 @@ For each future release:
 3. Increase the version number, for example:
 
 ```js
-globalThis.POW_APP_VERSION = "2.0.1";
+globalThis.POW_APP_VERSION = "3.0.1";
 ```
 
 4. If the master data changes, replace `data/master-data.js` and `data/master-data.json`.

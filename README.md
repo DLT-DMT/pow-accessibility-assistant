@@ -1,16 +1,17 @@
-# Prince of Wales Accessibility Assistant
+# DMT FOH Shift Guide
 
 Static offline PWA for guided Front of House shift support.
 
-Version: `2.0.0`
+Version: `3.0.0`
 
-## What Changed In Version 2
+## What Changed In Version 3
 
-- Guided setup: Theatre, About Me, Supporting Another Colleague, My Shift.
-- Uses refined Version 2 master data instead of the Version 1 track JSON.
-- Builds one running order from the selected track and mobility profile.
-- Adds only the relevant support tasks for another colleague's selected track and mobility.
-- Keeps the static offline architecture for GitHub Pages and iPhone Home Screen use.
+- Renamed the app to DMT FOH Shift Guide.
+- Added full track overview cards with RAG status and counters.
+- Combined Walking Stick and Rollator into one working profile.
+- Expanded cleaning schedule references into operational cleaning task lists.
+- Added Quick Reference for 999 calls, muster points, and radio codes.
+- Added What's New release notes beside the version number.
 
 ## Structure
 
@@ -22,7 +23,7 @@ Version: `2.0.0`
 - `manifest.json` - installable PWA metadata
 - `service-worker.js` - offline cache
 - `version.js` - release version used by the app and service worker
-- `data/master-data.json` - refined Version 2 app data
+- `data/master-data.json` - refined Version 3 app data
 - `data/master-data.js` - browser-safe local data file used by the app
 - `assets/` - theatre image and attribution
 - `icons/` - PWA icons

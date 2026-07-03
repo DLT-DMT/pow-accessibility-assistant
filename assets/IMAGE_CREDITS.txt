@@ -9,6 +9,7 @@ License: CC BY-SA 3.0 Unported / GFDL
 License URL: https://creativecommons.org/licenses/by-sa/3.0/
 
 Local app asset:
-assets/prince-of-wales-theatre-900.jpg
+assets/prince-of-wales-theatre-tower.jpg
 
-The local asset is a resized JPEG derived from the original file for app performance.
+The local asset is a cropped JPEG derived from the original file for app performance.
+The crop keeps the recognisable Prince of Wales tower and removes outdated production-specific signage.

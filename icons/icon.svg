@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Prince of Wales Accessibility Assistant icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="DMT FOH Shift Guide icon">
   <rect width="512" height="512" rx="88" fill="#0d2b45"/>
   <rect x="66" y="82" width="380" height="348" rx="54" fill="#f7fafc"/>
   <path d="M114 370h284" stroke="#0d2b45" stroke-width="26" stroke-linecap="round"/>
@@ -6,5 +6,5 @@
   <path d="M188 342V210h136v132" fill="#d6b35a"/>
   <path d="M214 342V246h84v96" fill="#0d2b45"/>
   <path d="M198 178h116" stroke="#0d2b45" stroke-width="22" stroke-linecap="round"/>
-  <text x="256" y="456" fill="#f7fafc" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800" text-anchor="middle">POW</text>
+  <text x="256" y="456" fill="#f7fafc" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800" text-anchor="middle">DMT</text>
 </svg>

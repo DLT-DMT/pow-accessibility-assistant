@@ -1,9 +1,9 @@
 window.POW_MASTER_DATA = {
   "meta": {
-    "version": "2.0.0",
-    "generatedOn": "2026-07-02",
+    "version": "3.0.0",
+    "generatedOn": "2026-07-03",
     "sourceWorkbook": "POW Accessibility Master Data v2.xlsx",
-    "purpose": "Version 2 operational shift assistant data."
+    "purpose": "Version 3 operational shift guide data."
   },
   "theatres": [
     {
@@ -16,14 +16,14 @@ window.POW_MASTER_DATA = {
   "profiles": [
     {
       "id": "standard",
-      "label": "No Accessibility Requirements",
+      "label": "Standard Duties",
       "description": "Baseline operational track with no accessibility overlay applied.",
       "sortOrder": 10
     },
     {
       "id": "rollator",
-      "label": "Rollator",
-      "description": "Mobility profile using a rollator and/or walking stick where recorded.",
+      "label": "Walking Stick / Rollator",
+      "description": "Mobility profile using a walking stick and/or rollator where recorded.",
       "sortOrder": 20
     },
     {
@@ -460,6 +460,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Seat Checks Before House Opens",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B2"
     },
     {
@@ -471,6 +472,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "Sell/direct at top of Door C",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B2"
     },
     {
@@ -482,6 +484,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Sitting in Door C, Watching the audience and reporting any issues as they arise to the DM",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C2"
     },
     {
@@ -493,6 +496,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Sell ice creams at Auditorium Right Fire Exit, get Act 1 information from Stalls 2",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D2"
     },
     {
@@ -504,6 +508,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Delfont Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E2"
     },
     {
@@ -515,6 +520,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Collect bucket from door C, empty in bar and return to Door C",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E2"
     },
     {
@@ -525,7 +531,10 @@ window.POW_MASTER_DATA = {
       "sequence": 3,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Delfont Bar cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E2"
     },
     {
@@ -537,6 +546,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Get polycarb bucket and stand at Auditorium Right Fire Exit",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F2"
     },
     {
@@ -548,6 +558,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Open and stay by fire exit until auditorium is clear",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F2"
     },
     {
@@ -559,6 +570,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Pick up in stalls",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F2"
     },
     {
@@ -570,6 +582,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean stalls toilets, change Delfont Bar bins",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G2"
     },
     {
@@ -581,6 +594,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Bins to street",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G2"
     },
     {
@@ -592,6 +606,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Top of Door C",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H2"
     },
     {
@@ -603,6 +618,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Clear Seats H-U, 23 and below + Stairs to Delfont Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I2"
     },
     {
@@ -614,6 +630,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Seat Checks Before House Opens/ Sell direct at Auditorium Right Fire Exit",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B3"
     },
     {
@@ -624,7 +641,10 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Delfont bar cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C3"
     },
     {
@@ -636,6 +656,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Pass Door direct",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D3"
     },
     {
@@ -647,6 +668,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Sitting in Door C, Watching the audience and reporting any issues as they arise to the DM",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E3"
     },
     {
@@ -658,6 +680,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Door C - polycarb collection and pickup in stalls, leave via Door C to ensure auditorium is clear",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F3"
     },
     {
@@ -669,6 +692,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean stalls toilets, change Delfont Bar bins",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G3"
     },
     {
@@ -680,6 +704,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Bins to street",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G3"
     },
     {
@@ -691,6 +716,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Auditorium Right Fire Exit",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H3"
     },
     {
@@ -702,6 +728,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Clear Seats A-G, 23 and below + Close Auditorium Right Fire Exit",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I3"
     },
     {
@@ -713,6 +740,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "Sell/direct at Door A (Row G)",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B4"
     },
     {
@@ -723,7 +751,10 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Delfont bar cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C4"
     },
     {
@@ -735,6 +766,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Collect polys and direct patrons at Door B, passing on information for stalls 3",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D4"
     },
     {
@@ -746,6 +778,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Sitting in Door B, Watching the audience and reporting any issues as they arise to the DM",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E4"
     },
     {
@@ -757,6 +790,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Door B - polycarb and pickup in stalls, leave via Door B to ensure auditorium is clear",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F4"
     },
     {
@@ -768,6 +802,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean stalls toilets, change Delfont Bar bins",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G4"
     },
     {
@@ -779,6 +814,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Bins to street",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G4"
     },
     {
@@ -790,6 +826,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Door A",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H4"
     },
     {
@@ -801,6 +838,7 @@ window.POW_MASTER_DATA = {
       "typeId": "clearance",
       "type": "Clearance",
       "text": "Clear Seats A-G, 24 and above, Door A & Lift",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I4"
     },
     {
@@ -812,6 +850,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "Sell/direct at Door B",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B5"
     },
     {
@@ -823,6 +862,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Sitting in Door B, Watching the audience and reporting any issues as they arise to the DM",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C5"
     },
     {
@@ -834,6 +874,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Open Doors B",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D5"
     },
     {
@@ -845,6 +886,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "Sell ice creams at Door A Alcove, get Act 1 information from Stalls 4",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D5"
     },
     {
@@ -856,6 +898,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Delfont Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E5"
     },
     {
@@ -866,7 +909,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
-      "text": "Collect bucket from door B, empty in bar and return to Door B.Cleaning schedule reference: see Delfont Bar cleaning sheet",
+      "text": "Collect bucket from door B, empty in bar and return to Door B.",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E5"
     },
     {
@@ -878,6 +924,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Get polycarb collection and stand at Door A",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F5"
     },
     {
@@ -889,6 +936,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Pickup in stalls, leave via Door A to ensure auditorium is clear",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F5"
     },
     {
@@ -900,6 +948,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean stalls toilets, change Delfont Bar bins",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G5"
     },
     {
@@ -911,6 +960,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Bins to street",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G5"
     },
     {
@@ -922,6 +972,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Door B",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H5"
     },
     {
@@ -933,6 +984,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Clear Stalls H-U, 24 and above, Door B, Closing Fire exit",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I5"
     },
     {
@@ -944,6 +996,7 @@ window.POW_MASTER_DATA = {
       "typeId": "scanning",
       "type": "Ticket Scanning",
       "text": "Scan Tickets",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B6"
     },
     {
@@ -955,6 +1008,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Greet (Front Doors)",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B6"
     },
     {
@@ -966,6 +1020,7 @@ window.POW_MASTER_DATA = {
       "typeId": "scanning",
       "type": "Ticket Scanning",
       "text": "Latecomers ticket scanner",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B6"
     },
     {
@@ -977,6 +1032,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "American Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C6"
     },
     {
@@ -987,7 +1043,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see American cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_american"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C6"
     },
     {
@@ -999,6 +1058,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Princes' Room toilet queue management (block toilets if there is a VIP)",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D6"
     },
     {
@@ -1009,7 +1069,10 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "American Bar - Cleaning schedule reference: see American Bar cleaning sheet",
+      "text": "American Bar",
+      "cleaningAreaIds": [
+        "clean_american"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E6"
     },
     {
@@ -1021,6 +1084,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Loge 4, Circle Pick-up",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F6"
     },
     {
@@ -1032,6 +1096,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean Circle Gents toilets, change bins in Erte room",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G6"
     },
     {
@@ -1043,6 +1108,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Barrier to Princes' Room",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H6"
     },
     {
@@ -1054,6 +1120,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clear Princes' Room, corridor, toilets, stairwell to Gents Toilets",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I6"
     },
     {
@@ -1065,6 +1132,7 @@ window.POW_MASTER_DATA = {
       "typeId": "scanning",
       "type": "Ticket Scanning",
       "text": "Scan Tickets",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B7"
     },
     {
@@ -1076,6 +1144,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Greet (Front Doors)",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B7"
     },
     {
@@ -1087,6 +1156,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Foyer",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C7"
     },
     {
@@ -1097,7 +1167,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Follies cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_follies"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C7"
     },
     {
@@ -1109,6 +1182,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "Foyer Seller",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D7"
     },
     {
@@ -1119,7 +1193,10 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Delfont Bar - Cleaning schedule reference: see Delfont Bar cleaning sheet",
+      "text": "Delfont Bar",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E7"
     },
     {
@@ -1131,6 +1208,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Loge 2 /Stalls Pick-up",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F7"
     },
     {
@@ -1142,6 +1220,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Take stalls pickup bags to refuse/outside",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G7"
     },
     {
@@ -1153,6 +1232,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Loge 2",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H7"
     },
     {
@@ -1164,6 +1244,7 @@ window.POW_MASTER_DATA = {
       "typeId": "clearance",
       "type": "Clearance",
       "text": "Clear Loge 2 & Stairwell to Pass Door",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I7"
     },
     {
@@ -1175,6 +1256,7 @@ window.POW_MASTER_DATA = {
       "typeId": "scanning",
       "type": "Ticket Scanning",
       "text": "Scan Tickets",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B8"
     },
     {
@@ -1186,6 +1268,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Greet (Side Doors)",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B8"
     },
     {
@@ -1197,6 +1280,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Delfont Bar - Take polycarb bucket to Stalls 1 and 4",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C8"
     },
     {
@@ -1207,7 +1291,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Delfont cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C8"
     },
     {
@@ -1219,6 +1306,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Open Door A - Interval Passes on the side doors",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D8"
     },
     {
@@ -1230,6 +1318,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Foyer",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E8"
     },
     {
@@ -1240,7 +1329,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Follies cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_follies"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E8"
     },
     {
@@ -1252,6 +1344,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Pass Door",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F8"
     },
     {
@@ -1263,6 +1356,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Get polycarb bucket for pick-up",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G8"
     },
     {
@@ -1274,6 +1368,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Piano Room",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H8"
     },
     {
@@ -1285,6 +1380,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clear Piano Room, Cloakroom and Gents Toilets",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I8"
     },
     {
@@ -1296,6 +1392,7 @@ window.POW_MASTER_DATA = {
       "typeId": "scanning",
       "type": "Ticket Scanning",
       "text": "Scan Tickets",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B9"
     },
     {
@@ -1307,6 +1404,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Greet (Side Doors)",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B9"
     },
     {
@@ -1318,6 +1416,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Folies",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C9"
     },
     {
@@ -1329,6 +1428,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Set up Interval Tables",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C9"
     },
     {
@@ -1339,7 +1439,10 @@ window.POW_MASTER_DATA = {
       "sequence": 3,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Folies cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_follies"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C9"
     },
     {
@@ -1351,6 +1454,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "American Bar Interval Orders - Light Up sign at Loge 3 before Act 2 begins",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D9"
     },
     {
@@ -1362,6 +1466,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Foyer",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E9"
     },
     {
@@ -1372,7 +1477,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Follies cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_follies"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E9"
     },
     {
@@ -1384,6 +1492,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Foyer De-greet on the Side Doors",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F9"
     },
     {
@@ -1395,6 +1504,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean Circle Ladies toilets, change bins in follies",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G9"
     },
     {
@@ -1406,6 +1516,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Loge 4",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H9"
     },
     {
@@ -1417,6 +1528,7 @@ window.POW_MASTER_DATA = {
       "typeId": "manual_handling",
       "type": "Manual Handling",
       "text": "Clear Loge 4, Erte Room, curved stairs to Folies",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I9"
     },
     {
@@ -1428,6 +1540,7 @@ window.POW_MASTER_DATA = {
       "typeId": "scanning",
       "type": "Ticket Scanning",
       "text": "Scan Tickets",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B10"
     },
     {
@@ -1439,6 +1552,7 @@ window.POW_MASTER_DATA = {
       "typeId": "restocking",
       "type": "Restocking",
       "text": "Greet (Box Office), prepare Cubes with Cellotape & Raffle Tickets",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B10"
     },
     {
@@ -1450,6 +1564,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Delfont Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C10"
     },
     {
@@ -1460,7 +1575,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Delfont bar cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C10"
     },
     {
@@ -1472,6 +1590,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "Delfont Bar Interval Orders",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D10"
     },
     {
@@ -1483,6 +1602,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Foyer",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E10"
     },
     {
@@ -1493,7 +1613,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Follies cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_follies"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E10"
     },
     {
@@ -1505,6 +1628,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Take polycarb bucket to Loge 1 - pickup in circle",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F10"
     },
     {
@@ -1516,6 +1640,7 @@ window.POW_MASTER_DATA = {
       "typeId": "clearance",
       "type": "Clearance",
       "text": "Leave via Loge 1 to ROH to ensure its clear",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F10"
     },
     {
@@ -1527,6 +1652,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Take bin bags",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F10"
     },
     {
@@ -1538,6 +1664,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Take circle pickup bags to refuse/outside",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G10"
     },
     {
@@ -1549,6 +1676,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Loge 1",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H10"
     },
     {
@@ -1560,6 +1688,7 @@ window.POW_MASTER_DATA = {
       "typeId": "clearance",
       "type": "Clearance",
       "text": "Clear Seats A-E, 23 and below",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I10"
     },
     {
@@ -1571,6 +1700,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Clear & Close Loge 1 fire exit",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I10"
     },
     {
@@ -1582,6 +1712,7 @@ window.POW_MASTER_DATA = {
       "typeId": "queue",
       "type": "Queue Management",
       "text": "Direct Queue in front of Side Doors",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B11"
     },
     {
@@ -1593,6 +1724,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Foyer",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C11"
     },
     {
@@ -1603,7 +1735,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Follies cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_follies"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C11"
     },
     {
@@ -1615,6 +1750,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Loge 2",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D11"
     },
     {
@@ -1626,6 +1762,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Loge 1 starwell",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D11"
     },
     {
@@ -1637,6 +1774,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Dirceting patrons & blocking fire exit",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D11"
     },
     {
@@ -1647,7 +1785,10 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Delfont Bar - Cleaning schedule reference: see Delfont Bar cleaning sheet",
+      "text": "Delfont Bar",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E11"
     },
     {
@@ -1659,6 +1800,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "Merch Selling in the Foyer",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F11"
     },
     {
@@ -1670,6 +1812,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Foyer Bins",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G11"
     },
     {
@@ -1681,6 +1824,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Foyer",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H11"
     },
     {
@@ -1692,6 +1836,7 @@ window.POW_MASTER_DATA = {
       "typeId": "clearance",
       "type": "Clearance",
       "text": "Clear Foyer",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I11"
     },
     {
@@ -1703,6 +1848,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Take bin outside without lid, greeting patrons from the end of the barrier",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B12"
     },
     {
@@ -1713,7 +1859,10 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Follies Cleaning schedule reference: see Folies Bar cleaning sheet",
+      "text": "Follies",
+      "cleaningAreaIds": [
+        "clean_follies"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C12"
     },
     {
@@ -1725,6 +1874,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "American Bar Interval Orders",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D12"
     },
     {
@@ -1736,6 +1886,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Follies Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E12"
     },
     {
@@ -1746,7 +1897,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
-      "text": "Take down American & Follies programmes & Ices- - Cleaning schedule reference: see Folies cleaning sheet",
+      "text": "Take down American & Follies programmes & Ices",
+      "cleaningAreaIds": [
+        "clean_follies"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E12"
     },
     {
@@ -1758,6 +1912,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Folies",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F12"
     },
     {
@@ -1769,6 +1924,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean Stalls Gents toilets, change bins in piano room",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G12"
     },
     {
@@ -1780,6 +1936,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Folies",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H12"
     },
     {
@@ -1791,6 +1948,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clear Folies & Gents",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I12"
     },
     {
@@ -1802,6 +1960,7 @@ window.POW_MASTER_DATA = {
       "typeId": "queue",
       "type": "Queue Management",
       "text": "End of the queue, greeting and desposing of confiscated food",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B13"
     },
     {
@@ -1813,6 +1972,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Check with access as to who you are looking after",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C13"
     },
     {
@@ -1824,6 +1984,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "American Bar Interval Orders",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D13"
     },
     {
@@ -1835,6 +1996,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Follies",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E13"
     },
     {
@@ -1845,7 +2007,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see American Bar cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_american"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E13"
     },
     {
@@ -1857,6 +2022,7 @@ window.POW_MASTER_DATA = {
       "typeId": "access_support",
       "type": "Access Support",
       "text": "Assist Access/Foyer De-greet",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F13"
     },
     {
@@ -1868,6 +2034,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean Stalls Gents toilets, change bins",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G13"
     },
     {
@@ -1879,6 +2046,7 @@ window.POW_MASTER_DATA = {
       "typeId": "access_support",
       "type": "Access Support",
       "text": "Delegated Access Patrons",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H13"
     },
     {
@@ -1890,6 +2058,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "As Directed",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I13"
     },
     {
@@ -1901,6 +2070,7 @@ window.POW_MASTER_DATA = {
       "typeId": "manual_handling",
       "type": "Manual Handling",
       "text": "Directing from the Piano Room, assisting with moving",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B14"
     },
     {
@@ -1911,7 +2081,10 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Delfont bar cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C14"
     },
     {
@@ -1923,6 +2096,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Loge 2",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D14"
     },
     {
@@ -1934,6 +2108,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Loge 1 Fire Exit",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D14"
     },
     {
@@ -1945,6 +2120,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Delfont Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E14"
     },
     {
@@ -1955,7 +2131,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Delfont bar cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E14"
     },
     {
@@ -1967,6 +2146,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Delfont Bar Degreet",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F14"
     },
     {
@@ -1978,6 +2158,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean Stalls Ladies toilets & Access toilet",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G14"
     },
     {
@@ -1989,6 +2170,7 @@ window.POW_MASTER_DATA = {
       "typeId": "access_support",
       "type": "Access Support",
       "text": "Delegated Access Patrons",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H14"
     },
     {
@@ -2000,6 +2182,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "As Directed",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I14"
     },
     {
@@ -2011,6 +2194,7 @@ window.POW_MASTER_DATA = {
       "typeId": "manual_handling",
       "type": "Manual Handling",
       "text": "Check seats have been removed, then stood outside the front being the first person Access Patrons meet",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B15"
     },
     {
@@ -2022,6 +2206,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "DON'T WAIT TO BE CALLED",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B15"
     },
     {
@@ -2033,6 +2218,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Foyer",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C15"
     },
     {
@@ -2043,7 +2229,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Follies cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_follies"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C15"
     },
     {
@@ -2055,6 +2244,7 @@ window.POW_MASTER_DATA = {
       "typeId": "access_support",
       "type": "Access Support",
       "text": "Assist Access Patrons",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D15"
     },
     {
@@ -2066,6 +2256,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Delfont Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E15"
     },
     {
@@ -2076,7 +2267,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Delfont cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E15"
     },
     {
@@ -2088,6 +2282,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Access, de-greet",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F15"
     },
     {
@@ -2099,6 +2294,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "If access have left/don't need you, assist with Polycarb Pick-up",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F15"
     },
     {
@@ -2110,6 +2306,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Take pickup bags to refuse/outside",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G15"
     },
     {
@@ -2121,6 +2318,7 @@ window.POW_MASTER_DATA = {
       "typeId": "access_support",
       "type": "Access Support",
       "text": "Assist Access",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H15"
     },
     {
@@ -2132,6 +2330,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "As Directed",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I15"
     },
     {
@@ -2143,6 +2342,7 @@ window.POW_MASTER_DATA = {
       "typeId": "manual_handling",
       "type": "Manual Handling",
       "text": "Check seats have been removed, then stood outside the front being the first person Access Patrons meet",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B16"
     },
     {
@@ -2154,6 +2354,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "DON'T WAIT TO BE CALLED",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B16"
     },
     {
@@ -2165,6 +2366,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "American Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C16"
     },
     {
@@ -2175,7 +2377,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see American Bar cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_american"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C16"
     },
     {
@@ -2187,6 +2392,7 @@ window.POW_MASTER_DATA = {
       "typeId": "access_support",
       "type": "Access Support",
       "text": "Assist Access Patrons",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D16"
     },
     {
@@ -2198,6 +2404,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "American Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E16"
     },
     {
@@ -2208,7 +2415,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see American Bar cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_american"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E16"
     },
     {
@@ -2220,6 +2430,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Access, de-greet",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F16"
     },
     {
@@ -2231,6 +2442,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "If access have left/don't need you, assist with Polycarb Pick-up",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F16"
     },
     {
@@ -2242,6 +2454,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Take pickup bags to refuse/outside",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G16"
     },
     {
@@ -2253,6 +2466,7 @@ window.POW_MASTER_DATA = {
       "typeId": "access_support",
       "type": "Access Support",
       "text": "Assist Access",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H16"
     },
     {
@@ -2264,6 +2478,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "As Directed",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I16"
     },
     {
@@ -2275,6 +2490,7 @@ window.POW_MASTER_DATA = {
       "typeId": "manual_handling",
       "type": "Manual Handling",
       "text": "Check seats have been removed, then stood by the TV to assist where needed",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B17"
     },
     {
@@ -2286,6 +2502,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Foyer",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C17"
     },
     {
@@ -2296,7 +2513,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Follies cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_follies"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C17"
     },
     {
@@ -2308,6 +2528,7 @@ window.POW_MASTER_DATA = {
       "typeId": "access_support",
       "type": "Access Support",
       "text": "Assist Access Patrons",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D17"
     },
     {
@@ -2319,6 +2540,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Foyer",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E17"
     },
     {
@@ -2329,7 +2551,10 @@ window.POW_MASTER_DATA = {
       "sequence": 2,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see Follies cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_follies"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E17"
     },
     {
@@ -2341,6 +2566,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Access, de-greet",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F17"
     },
     {
@@ -2352,6 +2578,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "If access have left/don't need you, assist with Polycarb Pick-up",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F17"
     },
     {
@@ -2363,6 +2590,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Take pickup bags to refuse/outside",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G17"
     },
     {
@@ -2374,6 +2602,7 @@ window.POW_MASTER_DATA = {
       "typeId": "access_support",
       "type": "Access Support",
       "text": "Assist Access",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H17"
     },
     {
@@ -2385,6 +2614,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "As Directed",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I17"
     },
     {
@@ -2396,6 +2626,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Direct at bottom of Door C, prevent glassware entering auditorium",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B18"
     },
     {
@@ -2406,7 +2637,10 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Delfont Bar - Cleaning schedule reference: see Delfont bar cleaning sheet",
+      "text": "Delfont Bar",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C18"
     },
     {
@@ -2418,6 +2652,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Hand out cups at bottom of Door C",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D18"
     },
     {
@@ -2428,7 +2663,10 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Delfont Bar - Cleaning schedule reference: see Delfont bar cleaning sheet",
+      "text": "Delfont Bar",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E18"
     },
     {
@@ -2440,6 +2678,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "De-Greet bottom of Door C - Clear Stalls to Sales/Bar Sup",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F18"
     },
     {
@@ -2451,6 +2690,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean Stalls Ladies toilets, change bins at bottom door C",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G18"
     },
     {
@@ -2462,6 +2702,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Delfont Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H18"
     },
     {
@@ -2473,6 +2714,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clear Delfont Bar, Ladies & Access Toilet",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I18"
     },
     {
@@ -2484,6 +2726,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Cloakroom (until latecomers point)",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B19"
     },
     {
@@ -2494,7 +2737,10 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Delfont Bar - Cleaning schedule reference: see Delfont bar cleaning sheet",
+      "text": "Delfont Bar",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C19"
     },
     {
@@ -2506,6 +2752,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "Delfont Bar Interval Orders - head to the cloakroom if required",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D19"
     },
     {
@@ -2517,6 +2764,7 @@ window.POW_MASTER_DATA = {
       "typeId": "kiosk",
       "type": "Kiosk",
       "text": "Assist Kiosk in the Cellar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E19"
     },
     {
@@ -2528,6 +2776,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Cloakroom, set up for the next day",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F19"
     },
     {
@@ -2539,6 +2788,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean Stalls Gents toilets, change bins in piano room",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G19"
     },
     {
@@ -2550,6 +2800,7 @@ window.POW_MASTER_DATA = {
       "typeId": "cleaning",
       "type": "Cleaning",
       "text": "Cleaners Cupboard",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H19"
     },
     {
@@ -2561,6 +2812,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Close fire exit, Delfont Bar, Ladies & Access Toilet",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I19"
     },
     {
@@ -2572,6 +2824,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "Sell/direct at top of Door E",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B20"
     },
     {
@@ -2583,6 +2836,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Sitting in Door E",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C20"
     },
     {
@@ -2594,6 +2848,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Watching the audience and reporting any issues as they arise to the DM",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C20"
     },
     {
@@ -2605,6 +2860,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "Sell Ice-Creams at the top of Door E",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D20"
     },
     {
@@ -2616,6 +2872,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "American Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E20"
     },
     {
@@ -2627,6 +2884,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Take polycarb bucket to Door E",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E20"
     },
     {
@@ -2637,7 +2895,10 @@ window.POW_MASTER_DATA = {
       "sequence": 3,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see American cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_american"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E20"
     },
     {
@@ -2649,6 +2910,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Circle Fire Exit, Clear to FOH Supervisor in the Follies",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F20"
     },
     {
@@ -2660,6 +2922,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Collect polycarbs and take to American Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F20"
     },
     {
@@ -2671,6 +2934,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean circle toilets, change American Bar bins",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G20"
     },
     {
@@ -2682,6 +2946,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Bins to street",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G20"
     },
     {
@@ -2693,6 +2958,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Door E",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H20"
     },
     {
@@ -2704,6 +2970,7 @@ window.POW_MASTER_DATA = {
       "typeId": "clearance",
       "type": "Clearance",
       "text": "Clear Seats F-L, 23 and below + Door E Stairwell",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I20"
     },
     {
@@ -2715,6 +2982,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "Sell/direct at bottom of Door E",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B21"
     },
     {
@@ -2725,7 +2993,10 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "American Bar, See American cleaning tasks",
+      "text": "American Bar",
+      "cleaningAreaIds": [
+        "clean_american"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C21"
     },
     {
@@ -2737,6 +3008,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Organise ladies toilets queue at bottom of Door E",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D21"
     },
     {
@@ -2748,6 +3020,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Sitting in Door E, Watching the audience and reporting any issues as they arise to the DM",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E21"
     },
     {
@@ -2759,6 +3032,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Top of Door E - polycarb collection and pickup in circle",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F21"
     },
     {
@@ -2770,6 +3044,7 @@ window.POW_MASTER_DATA = {
       "typeId": "clearance",
       "type": "Clearance",
       "text": "Leave via door E to ensure its clear",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F21"
     },
     {
@@ -2781,6 +3056,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean circle toilets, change American Bar bins",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G21"
     },
     {
@@ -2792,6 +3068,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Bins to street",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G21"
     },
     {
@@ -2803,6 +3080,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Circle Fire Exit",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H21"
     },
     {
@@ -2814,6 +3092,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Close Circle Fire exit, Clear American Bar & Ladies",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I21"
     },
     {
@@ -2825,6 +3104,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "Sell/direct outside loge 3",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B22"
     },
     {
@@ -2835,7 +3115,10 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "American Bar, See American cleaning tasks",
+      "text": "American Bar",
+      "cleaningAreaIds": [
+        "clean_american"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C22"
     },
     {
@@ -2847,6 +3130,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Organise mens toilets queue at bottom of Door D",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D22"
     },
     {
@@ -2858,6 +3142,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Sitting in Door D, Watching the audience and reporting any issues as they arise to the DM",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E22"
     },
     {
@@ -2869,6 +3154,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Top of Door D - polycarb collection and pickup in circle leave via door D to ensure its clear - check princes room and VIP toilets are clear",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F22"
     },
     {
@@ -2880,6 +3166,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean circle toilets, change American Bar bins",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G22"
     },
     {
@@ -2891,6 +3178,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Bins to street",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G22"
     },
     {
@@ -2902,6 +3190,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Loge 3",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H22"
     },
     {
@@ -2913,6 +3202,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Clear Seats A-E, 24 and above, Loge 3, Corridor into the Follies",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I22"
     },
     {
@@ -2924,6 +3214,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "Sell/direct in Erte room",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B23"
     },
     {
@@ -2935,6 +3226,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "top of Door D when house opens",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B23"
     },
     {
@@ -2946,6 +3238,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Sitting in Door D, Watching the audience and reporting any issues as they arise to the DM",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C23"
     },
     {
@@ -2957,6 +3250,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "Sell Ice-Creams at the top of Door D",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D23"
     },
     {
@@ -2968,6 +3262,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "American Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E23"
     },
     {
@@ -2979,6 +3274,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Take polycarb bucket to Door D",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E23"
     },
     {
@@ -2989,7 +3285,10 @@ window.POW_MASTER_DATA = {
       "sequence": 3,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see American cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_american"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E23"
     },
     {
@@ -3001,6 +3300,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Get polycarb bucket and stand at Loge 3 - pickup in circle",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F23"
     },
     {
@@ -3012,6 +3312,7 @@ window.POW_MASTER_DATA = {
       "typeId": "clearance",
       "type": "Clearance",
       "text": "Leave via Loge 3 to ensure its clear",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F23"
     },
     {
@@ -3023,6 +3324,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Take polycarbs to american bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F23"
     },
     {
@@ -3034,6 +3336,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Clean circle toilets, change American Bar bins",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G23"
     },
     {
@@ -3045,6 +3348,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Bins to street",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G23"
     },
     {
@@ -3056,6 +3360,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Door D",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H23"
     },
     {
@@ -3067,6 +3372,7 @@ window.POW_MASTER_DATA = {
       "typeId": "clearance",
       "type": "Clearance",
       "text": "Clear Seats F-L, 24 and above + Assist FOH Sup at Loge 3",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I23"
     },
     {
@@ -3078,6 +3384,7 @@ window.POW_MASTER_DATA = {
       "typeId": "kiosk",
       "type": "Kiosk",
       "text": "Selling in Kiosk",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B24"
     },
     {
@@ -3088,7 +3395,10 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Delfont Bar - Cleaning schedule reference: see Delfont bar cleaning sheet",
+      "text": "Delfont Bar",
+      "cleaningAreaIds": [
+        "clean_delfont"
+      ],
       "sourceCell": "'MASTER Track Sheet'!C24"
     },
     {
@@ -3100,6 +3410,7 @@ window.POW_MASTER_DATA = {
       "typeId": "kiosk",
       "type": "Kiosk",
       "text": "Selling in Kiosk",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D24"
     },
     {
@@ -3111,6 +3422,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Assist Sales Supervisor/ Reset Piano Room",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E24"
     },
     {
@@ -3122,6 +3434,7 @@ window.POW_MASTER_DATA = {
       "typeId": "kiosk",
       "type": "Kiosk",
       "text": "Selling in Kiosk/ PLU",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F24"
     },
     {
@@ -3133,6 +3446,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Change Bins in the Piano Room",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G24"
     },
     {
@@ -3144,6 +3458,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Pass Door",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H24"
     },
     {
@@ -3155,6 +3470,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Clear Pass Door & Staircase Rear of House to Delfont Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I24"
     },
     {
@@ -3166,6 +3482,7 @@ window.POW_MASTER_DATA = {
       "typeId": "kiosk",
       "type": "Kiosk",
       "text": "In kiosk",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B25"
     },
     {
@@ -3177,6 +3494,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Reset Piano Room",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C25"
     },
     {
@@ -3188,6 +3506,7 @@ window.POW_MASTER_DATA = {
       "typeId": "restocking",
       "type": "Restocking",
       "text": "Restock",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C25"
     },
     {
@@ -3199,6 +3518,7 @@ window.POW_MASTER_DATA = {
       "typeId": "kiosk",
       "type": "Kiosk",
       "text": "Sell in Kiosk",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D25"
     },
     {
@@ -3210,6 +3530,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Assist Sales Supervisor/ Reset Piano Room",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E25"
     },
     {
@@ -3221,6 +3542,7 @@ window.POW_MASTER_DATA = {
       "typeId": "kiosk",
       "type": "Kiosk",
       "text": "Sell in Kiosk",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F25"
     },
     {
@@ -3232,6 +3554,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Help other positions",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G25"
     },
     {
@@ -3243,6 +3566,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Piano Room",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H25"
     },
     {
@@ -3254,6 +3578,7 @@ window.POW_MASTER_DATA = {
       "typeId": "clearance",
       "type": "Clearance",
       "text": "Clear Piano Room",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I25"
     },
     {
@@ -3265,6 +3590,7 @@ window.POW_MASTER_DATA = {
       "typeId": "toilets",
       "type": "Toilets",
       "text": "Gents",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I25"
     },
     {
@@ -3276,6 +3602,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Cloakroom",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I25"
     },
     {
@@ -3287,6 +3614,7 @@ window.POW_MASTER_DATA = {
       "typeId": "kiosk",
       "type": "Kiosk",
       "text": "Selling in Kiosk",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B26"
     },
     {
@@ -3298,6 +3626,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "Folies",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C26"
     },
     {
@@ -3309,6 +3638,7 @@ window.POW_MASTER_DATA = {
       "typeId": "restocking",
       "type": "Restocking",
       "text": "Restock",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C26"
     },
     {
@@ -3320,6 +3650,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Re-set Follies",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C26"
     },
     {
@@ -3331,6 +3662,7 @@ window.POW_MASTER_DATA = {
       "typeId": "hoovering",
       "type": "Hoovering",
       "text": "Hoover as required",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C26"
     },
     {
@@ -3342,6 +3674,7 @@ window.POW_MASTER_DATA = {
       "typeId": "kiosk",
       "type": "Kiosk",
       "text": "Selling in Kiosk",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D26"
     },
     {
@@ -3353,6 +3686,7 @@ window.POW_MASTER_DATA = {
       "typeId": "kiosk",
       "type": "Kiosk",
       "text": "Set up Kiosk for outgoing",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E26"
     },
     {
@@ -3364,6 +3698,7 @@ window.POW_MASTER_DATA = {
       "typeId": "kiosk",
       "type": "Kiosk",
       "text": "Mannequins & Signage",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!E26"
     },
     {
@@ -3375,6 +3710,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "N/A",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F26"
     },
     {
@@ -3386,6 +3722,7 @@ window.POW_MASTER_DATA = {
       "typeId": "other",
       "type": "Other",
       "text": "N/A",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G26"
     },
     {
@@ -3397,6 +3734,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "American Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H26"
     },
     {
@@ -3408,6 +3746,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Clear American Bar",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I26"
     },
     {
@@ -3419,6 +3758,7 @@ window.POW_MASTER_DATA = {
       "typeId": "merchandise",
       "type": "Merchandise / Selling",
       "text": "In foyer - Selling Drinks and P&B",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!B27"
     },
     {
@@ -3430,6 +3770,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Restocking Bars",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!C27"
     },
     {
@@ -3441,6 +3782,7 @@ window.POW_MASTER_DATA = {
       "typeId": "directing",
       "type": "Directing / Greeting",
       "text": "Foyer glass watch (Doors A & B)",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!D27"
     },
     {
@@ -3451,7 +3793,10 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "cleaning",
       "type": "Cleaning",
-      "text": "Cleaning schedule reference: see American Bar cleaning sheet",
+      "text": "",
+      "cleaningAreaIds": [
+        "clean_american"
+      ],
       "sourceCell": "'MASTER Track Sheet'!E27"
     },
     {
@@ -3463,6 +3808,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Follies De-greet",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F27"
     },
     {
@@ -3474,6 +3820,7 @@ window.POW_MASTER_DATA = {
       "typeId": "pickup",
       "type": "Pick-up / Polycarb",
       "text": "Circle Auditorium Polycarb collection",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!F27"
     },
     {
@@ -3485,6 +3832,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bin_refuse",
       "type": "Bins / Refuse",
       "text": "Change bins in the Erte & Follies",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!G27"
     },
     {
@@ -3496,6 +3844,7 @@ window.POW_MASTER_DATA = {
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
       "text": "Evac Assist (Mon-Thurs), American Bar (Fri-Sat)",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!H27"
     },
     {
@@ -3506,7 +3855,8 @@ window.POW_MASTER_DATA = {
       "sequence": 1,
       "typeId": "evacuation",
       "type": "Evacuation / PEEP",
-      "text": "Evac Assist (Mon-Thurs),",
+      "text": "Evac Assist (Mon-Thurs)",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I27"
     },
     {
@@ -3518,6 +3868,7 @@ window.POW_MASTER_DATA = {
       "typeId": "bar",
       "type": "Bar Duty",
       "text": "Clear American Bar (Fri-Sat)",
+      "cleaningAreaIds": [],
       "sourceCell": "'MASTER Track Sheet'!I27"
     }
   ],
@@ -10600,6 +10951,1052 @@ window.POW_MASTER_DATA = {
         "standard"
       ],
       "sourceCell": "'Access Track Sheet'!F23"
+    }
+  ],
+  "cleaningAreas": [
+    {
+      "id": "clean_delfont",
+      "name": "Delfont Bar",
+      "locationId": "loc_delfont_bar"
+    },
+    {
+      "id": "clean_american",
+      "name": "American Bar",
+      "locationId": "loc_american_bar"
+    },
+    {
+      "id": "clean_follies",
+      "name": "Foyer / Follies Bar",
+      "locationId": "loc_follies"
+    }
+  ],
+  "cleaningAssignments": [
+    {
+      "id": "CLA0001",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Bring bar rubbish bags to refuse room",
+      "position": "Stalls 2,3, Cloakroom",
+      "assignee": "Stalls 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK002",
+      "sourceCell": "'FOH Delfont Cleaning'!A6:K6"
+    },
+    {
+      "id": "CLA0002",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Bring bar rubbish bags to refuse room",
+      "position": "Stalls 2,3, Cloakroom",
+      "assignee": "Stalls 3",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK003",
+      "sourceCell": "'FOH Delfont Cleaning'!A6:K6"
+    },
+    {
+      "id": "CLA0003",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Bring bar rubbish bags to refuse room",
+      "position": "Stalls 2,3, Cloakroom",
+      "assignee": "Cloakroom",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK018",
+      "sourceCell": "'FOH Delfont Cleaning'!A6:K6"
+    },
+    {
+      "id": "CLA0004",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "pickup",
+      "type": "Pick-up / Polycarb",
+      "text": "Dry and polish all glasses & Polycarbs",
+      "position": "ALL",
+      "assignee": "ALL",
+      "assigneeType": "all_tracks",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH Delfont Cleaning'!A7:K7"
+    },
+    {
+      "id": "CLA0005",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "manual_handling",
+      "type": "Manual Handling",
+      "text": "Pack down and remove empty cardboard boxes",
+      "position": "Stalls 2,3, Cloakroom",
+      "assignee": "Stalls 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK002",
+      "sourceCell": "'FOH Delfont Cleaning'!A8:K8"
+    },
+    {
+      "id": "CLA0006",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "manual_handling",
+      "type": "Manual Handling",
+      "text": "Pack down and remove empty cardboard boxes",
+      "position": "Stalls 2,3, Cloakroom",
+      "assignee": "Stalls 3",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK003",
+      "sourceCell": "'FOH Delfont Cleaning'!A8:K8"
+    },
+    {
+      "id": "CLA0007",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "manual_handling",
+      "type": "Manual Handling",
+      "text": "Pack down and remove empty cardboard boxes",
+      "position": "Stalls 2,3, Cloakroom",
+      "assignee": "Cloakroom",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK018",
+      "sourceCell": "'FOH Delfont Cleaning'!A8:K8"
+    },
+    {
+      "id": "CLA0008",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "cleaning",
+      "type": "Cleaning",
+      "text": "Wipe down all tables and table talkers (Delfont & Piano rooms)",
+      "position": "Ticket Scanner 5",
+      "assignee": "Ticket Scanner 5",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK009",
+      "sourceCell": "'FOH Delfont Cleaning'!A9:K9"
+    },
+    {
+      "id": "CLA0009",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "cleaning",
+      "type": "Cleaning",
+      "text": "Organise tables and chairs",
+      "position": "Ticket Scanner 3",
+      "assignee": "Ticket Scanner 3",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK007",
+      "sourceCell": "'FOH Delfont Cleaning'!A11:K11"
+    },
+    {
+      "id": "CLA0010",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "restocking",
+      "type": "Restocking",
+      "text": "Take away plastic boxes after restocking / restock bags to the cellar",
+      "position": "Cloakroom",
+      "assignee": "Cloakroom",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK018",
+      "sourceCell": "'FOH Delfont Cleaning'!A13:K13"
+    },
+    {
+      "id": "CLA0011",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "restocking",
+      "type": "Restocking",
+      "text": "Restock ice",
+      "position": "Delfont Bar",
+      "assignee": "Delfont Bar",
+      "assigneeType": "location",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH Delfont Cleaning'!A14:K14"
+    },
+    {
+      "id": "CLA0012",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "toilets",
+      "type": "Toilets",
+      "text": "Stalls Gents toilets & Access toilets",
+      "position": "Stalls 2",
+      "assignee": "Stalls 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK002",
+      "sourceCell": "'FOH Delfont Cleaning'!A15:K15"
+    },
+    {
+      "id": "CLA0013",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "toilets",
+      "type": "Toilets",
+      "text": "Stalls Ladies toilets",
+      "position": "Stalls 3",
+      "assignee": "Stalls 3",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK003",
+      "sourceCell": "'FOH Delfont Cleaning'!A17:K17"
+    },
+    {
+      "id": "CLA0014",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Delfont Room & Piano Room bins changed",
+      "position": "Stalls Kiosk",
+      "assignee": "Stalls Kiosk",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK023",
+      "sourceCell": "'FOH Delfont Cleaning'!A18:K18"
+    },
+    {
+      "id": "CLA0015",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "hoovering",
+      "type": "Hoovering",
+      "text": "Hoover Piano Room & stairs to Delfont",
+      "position": "Stalls Kiosk",
+      "assignee": "Stalls Kiosk",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK023",
+      "sourceCell": "'FOH Delfont Cleaning'!A19:K19"
+    },
+    {
+      "id": "CLA0016",
+      "areaId": "clean_delfont",
+      "phaseId": "act_1",
+      "typeId": "hoovering",
+      "type": "Hoovering",
+      "text": "Hoover Delfont Room",
+      "position": "Ticket Scanner 3",
+      "assignee": "Ticket Scanner 3",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK007",
+      "sourceCell": "'FOH Delfont Cleaning'!A20:K20"
+    },
+    {
+      "id": "CLA0017",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Bring bar rubbish bags to refuse room",
+      "position": "Stalls 1,4, Cloakroom, Welcome 1",
+      "assignee": "Stalls 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK001",
+      "sourceCell": "'FOH Delfont Cleaning'!A22:K22"
+    },
+    {
+      "id": "CLA0018",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Bring bar rubbish bags to refuse room",
+      "position": "Stalls 1,4, Cloakroom, Welcome 1",
+      "assignee": "Stalls 4",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK004",
+      "sourceCell": "'FOH Delfont Cleaning'!A22:K22"
+    },
+    {
+      "id": "CLA0019",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Bring bar rubbish bags to refuse room",
+      "position": "Stalls 1,4, Cloakroom, Welcome 1",
+      "assignee": "Cloakroom",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK018",
+      "sourceCell": "'FOH Delfont Cleaning'!A22:K22"
+    },
+    {
+      "id": "CLA0020",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Bring bar rubbish bags to refuse room",
+      "position": "Stalls 1,4, Cloakroom, Welcome 1",
+      "assignee": "Welcome 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK010",
+      "sourceCell": "'FOH Delfont Cleaning'!A22:K22"
+    },
+    {
+      "id": "CLA0021",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "pickup",
+      "type": "Pick-up / Polycarb",
+      "text": "Dry and polish all glasses & Polycarbs",
+      "position": "ALL",
+      "assignee": "ALL",
+      "assigneeType": "all_tracks",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH Delfont Cleaning'!A23:K23"
+    },
+    {
+      "id": "CLA0022",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "manual_handling",
+      "type": "Manual Handling",
+      "text": "Pack down and remove empty cardboard boxes",
+      "position": "Stalls 1,4, Cloakroom, Welcome 1",
+      "assignee": "Stalls 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK001",
+      "sourceCell": "'FOH Delfont Cleaning'!A24:K24"
+    },
+    {
+      "id": "CLA0023",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "manual_handling",
+      "type": "Manual Handling",
+      "text": "Pack down and remove empty cardboard boxes",
+      "position": "Stalls 1,4, Cloakroom, Welcome 1",
+      "assignee": "Stalls 4",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK004",
+      "sourceCell": "'FOH Delfont Cleaning'!A24:K24"
+    },
+    {
+      "id": "CLA0024",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "manual_handling",
+      "type": "Manual Handling",
+      "text": "Pack down and remove empty cardboard boxes",
+      "position": "Stalls 1,4, Cloakroom, Welcome 1",
+      "assignee": "Cloakroom",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK018",
+      "sourceCell": "'FOH Delfont Cleaning'!A24:K24"
+    },
+    {
+      "id": "CLA0025",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "manual_handling",
+      "type": "Manual Handling",
+      "text": "Pack down and remove empty cardboard boxes",
+      "position": "Stalls 1,4, Cloakroom, Welcome 1",
+      "assignee": "Welcome 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK010",
+      "sourceCell": "'FOH Delfont Cleaning'!A24:K24"
+    },
+    {
+      "id": "CLA0026",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "cleaning",
+      "type": "Cleaning",
+      "text": "Wipe down all tables and table talkers (Delfont & Piano rooms)",
+      "position": "Welcome Team 1",
+      "assignee": "Welcome Team 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK010",
+      "sourceCell": "'FOH Delfont Cleaning'!A25:K25"
+    },
+    {
+      "id": "CLA0027",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "cleaning",
+      "type": "Cleaning",
+      "text": "Organise tables and chairs",
+      "position": "Welcome Team 1",
+      "assignee": "Welcome Team 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK010",
+      "sourceCell": "'FOH Delfont Cleaning'!A26:K26"
+    },
+    {
+      "id": "CLA0028",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "restocking",
+      "type": "Restocking",
+      "text": "Take away plastic boxes after restocking / restock bags to the cellar",
+      "position": "Access 1",
+      "assignee": "Access 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK014",
+      "sourceCell": "'FOH Delfont Cleaning'!A27:K27"
+    },
+    {
+      "id": "CLA0029",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "restocking",
+      "type": "Restocking",
+      "text": "Restock ice",
+      "position": "Delfont Bar",
+      "assignee": "Delfont Bar",
+      "assigneeType": "location",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH Delfont Cleaning'!A28:K28"
+    },
+    {
+      "id": "CLA0030",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "toilets",
+      "type": "Toilets",
+      "text": "Stalls Gents toilets & Access toilets",
+      "position": "Stalls 1",
+      "assignee": "Stalls 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK001",
+      "sourceCell": "'FOH Delfont Cleaning'!A29:K29"
+    },
+    {
+      "id": "CLA0031",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "toilets",
+      "type": "Toilets",
+      "text": "Stalls Ladies toilets",
+      "position": "Stalls 4",
+      "assignee": "Stalls 4",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK004",
+      "sourceCell": "'FOH Delfont Cleaning'!A30:K30"
+    },
+    {
+      "id": "CLA0032",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Delfont Room & Piano Room bins changed",
+      "position": "Ticket Scanner 2",
+      "assignee": "Ticket Scanner 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK006",
+      "sourceCell": "'FOH Delfont Cleaning'!A31:K31"
+    },
+    {
+      "id": "CLA0033",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "hoovering",
+      "type": "Hoovering",
+      "text": "Hoover Piano Room & stairs to Delfont Room",
+      "position": "Access 1",
+      "assignee": "Access 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK014",
+      "sourceCell": "'FOH Delfont Cleaning'!A33:K33"
+    },
+    {
+      "id": "CLA0034",
+      "areaId": "clean_delfont",
+      "phaseId": "act_2",
+      "typeId": "hoovering",
+      "type": "Hoovering",
+      "text": "Hoover Delfont Room",
+      "position": "Ticket Scanner 2",
+      "assignee": "Ticket Scanner 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK006",
+      "sourceCell": "'FOH Delfont Cleaning'!A34:K34"
+    },
+    {
+      "id": "CLA0035",
+      "areaId": "clean_american",
+      "phaseId": "act_1",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Bring bar rubbish bags to refuse room",
+      "position": "ALL",
+      "assignee": "ALL",
+      "assigneeType": "all_tracks",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH American Cleaning'!A6:K6"
+    },
+    {
+      "id": "CLA0036",
+      "areaId": "clean_american",
+      "phaseId": "act_1",
+      "typeId": "pickup",
+      "type": "Pick-up / Polycarb",
+      "text": "Dry and polish all glasses & Polycarbs",
+      "position": "ALL",
+      "assignee": "ALL",
+      "assigneeType": "all_tracks",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH American Cleaning'!A7:K7"
+    },
+    {
+      "id": "CLA0037",
+      "areaId": "clean_american",
+      "phaseId": "act_1",
+      "typeId": "restocking",
+      "type": "Restocking",
+      "text": "Take away plastic boxes after restocking / restock bags to the cellar",
+      "position": "Access 2",
+      "assignee": "Access 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK015",
+      "sourceCell": "'FOH American Cleaning'!A8:K8"
+    },
+    {
+      "id": "CLA0038",
+      "areaId": "clean_american",
+      "phaseId": "act_1",
+      "typeId": "cleaning",
+      "type": "Cleaning",
+      "text": "Wipe down all tables and table talkers (American Bar)",
+      "position": "Circle 2",
+      "assignee": "Circle 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK020",
+      "sourceCell": "'FOH American Cleaning'!A9:K9"
+    },
+    {
+      "id": "CLA0039",
+      "areaId": "clean_american",
+      "phaseId": "act_1",
+      "typeId": "cleaning",
+      "type": "Cleaning",
+      "text": "Organise tables and chairs",
+      "position": "N/A",
+      "assignee": "N/A",
+      "assigneeType": "not_applicable",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH American Cleaning'!A10:K10"
+    },
+    {
+      "id": "CLA0040",
+      "areaId": "clean_american",
+      "phaseId": "act_1",
+      "typeId": "restocking",
+      "type": "Restocking",
+      "text": "Restock ice",
+      "position": "American Bar",
+      "assignee": "American Bar",
+      "assigneeType": "location",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH American Cleaning'!A11:K11"
+    },
+    {
+      "id": "CLA0041",
+      "areaId": "clean_american",
+      "phaseId": "act_1",
+      "typeId": "toilets",
+      "type": "Toilets",
+      "text": "Circle Gents toilets",
+      "position": "Circle 2",
+      "assignee": "Circle 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK020",
+      "sourceCell": "'FOH American Cleaning'!A12:K12"
+    },
+    {
+      "id": "CLA0042",
+      "areaId": "clean_american",
+      "phaseId": "act_1",
+      "typeId": "toilets",
+      "type": "Toilets",
+      "text": "Circle Ladies toilets",
+      "position": "Circle 3",
+      "assignee": "Circle 3",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK021",
+      "sourceCell": "'FOH American Cleaning'!A13:K13"
+    },
+    {
+      "id": "CLA0043",
+      "areaId": "clean_american",
+      "phaseId": "act_1",
+      "typeId": "hoovering",
+      "type": "Hoovering",
+      "text": "Hoover American Bar",
+      "position": "Ticket Scanner 1",
+      "assignee": "Ticket Scanner 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK005",
+      "sourceCell": "'FOH American Cleaning'!A14:K14"
+    },
+    {
+      "id": "CLA0044",
+      "areaId": "clean_american",
+      "phaseId": "act_1",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Change American bar bins",
+      "position": "Circle 3",
+      "assignee": "Circle 3",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK021",
+      "sourceCell": "'FOH American Cleaning'!A15:K15"
+    },
+    {
+      "id": "CLA0045",
+      "areaId": "clean_american",
+      "phaseId": "act_1",
+      "typeId": "toilets",
+      "type": "Toilets",
+      "text": "Princes’ Toilet checks",
+      "position": "Ticket Scanner 1",
+      "assignee": "Ticket Scanner 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK005",
+      "sourceCell": "'FOH American Cleaning'!A16:K16"
+    },
+    {
+      "id": "CLA0046",
+      "areaId": "clean_american",
+      "phaseId": "act_2",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Bring bar rubbish bags to refuse room",
+      "position": "ALL",
+      "assignee": "ALL",
+      "assigneeType": "all_tracks",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH American Cleaning'!A18:K18"
+    },
+    {
+      "id": "CLA0047",
+      "areaId": "clean_american",
+      "phaseId": "act_2",
+      "typeId": "pickup",
+      "type": "Pick-up / Polycarb",
+      "text": "Dry and polish all glasses & Polycarbs",
+      "position": "ALL",
+      "assignee": "ALL",
+      "assigneeType": "all_tracks",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH American Cleaning'!A19:K19"
+    },
+    {
+      "id": "CLA0048",
+      "areaId": "clean_american",
+      "phaseId": "act_2",
+      "typeId": "manual_handling",
+      "type": "Manual Handling",
+      "text": "Pack down and remove empty cardboard boxes",
+      "position": "Access 2",
+      "assignee": "Access 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK015",
+      "sourceCell": "'FOH American Cleaning'!A20:K20"
+    },
+    {
+      "id": "CLA0049",
+      "areaId": "clean_american",
+      "phaseId": "act_2",
+      "typeId": "cleaning",
+      "type": "Cleaning",
+      "text": "Wipe down all tables and table talkers (American Bar)",
+      "position": "Circle 1",
+      "assignee": "Circle 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK019",
+      "sourceCell": "'FOH American Cleaning'!A21:K21"
+    },
+    {
+      "id": "CLA0050",
+      "areaId": "clean_american",
+      "phaseId": "act_2",
+      "typeId": "cleaning",
+      "type": "Cleaning",
+      "text": "Organise tables and chairs",
+      "position": "N/A",
+      "assignee": "N/A",
+      "assigneeType": "not_applicable",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH American Cleaning'!A22:K22"
+    },
+    {
+      "id": "CLA0051",
+      "areaId": "clean_american",
+      "phaseId": "act_2",
+      "typeId": "restocking",
+      "type": "Restocking",
+      "text": "Take away plastic boxes after restocking / restock bags to the cellar",
+      "position": "Access 2",
+      "assignee": "Access 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK015",
+      "sourceCell": "'FOH American Cleaning'!A23:K23"
+    },
+    {
+      "id": "CLA0052",
+      "areaId": "clean_american",
+      "phaseId": "act_2",
+      "typeId": "restocking",
+      "type": "Restocking",
+      "text": "Restock ice",
+      "position": "American Bar",
+      "assignee": "American Bar",
+      "assigneeType": "location",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH American Cleaning'!A24:K24"
+    },
+    {
+      "id": "CLA0053",
+      "areaId": "clean_american",
+      "phaseId": "act_2",
+      "typeId": "toilets",
+      "type": "Toilets",
+      "text": "Circle Gents toilets",
+      "position": "Circle 1",
+      "assignee": "Circle 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK019",
+      "sourceCell": "'FOH American Cleaning'!A25:K25"
+    },
+    {
+      "id": "CLA0054",
+      "areaId": "clean_american",
+      "phaseId": "act_2",
+      "typeId": "toilets",
+      "type": "Toilets",
+      "text": "Circle Ladies toilets",
+      "position": "Circle 4",
+      "assignee": "Circle 4",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK022",
+      "sourceCell": "'FOH American Cleaning'!A26:K26"
+    },
+    {
+      "id": "CLA0055",
+      "areaId": "clean_american",
+      "phaseId": "act_2",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "American Bar bins changed",
+      "position": "Circle 4",
+      "assignee": "Circle 4",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK022",
+      "sourceCell": "'FOH American Cleaning'!A27:K27"
+    },
+    {
+      "id": "CLA0056",
+      "areaId": "clean_american",
+      "phaseId": "act_2",
+      "typeId": "hoovering",
+      "type": "Hoovering",
+      "text": "Hoover American Bar",
+      "position": "Ticket Scanner 1",
+      "assignee": "Ticket Scanner 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK005",
+      "sourceCell": "'FOH American Cleaning'!A28:K28"
+    },
+    {
+      "id": "CLA0057",
+      "areaId": "clean_american",
+      "phaseId": "act_2",
+      "typeId": "toilets",
+      "type": "Toilets",
+      "text": "Princes’ Toilet checks",
+      "position": "Ticket Scanner 1",
+      "assignee": "Ticket Scanner 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK005",
+      "sourceCell": "'FOH American Cleaning'!A29:K29"
+    },
+    {
+      "id": "CLA0058",
+      "areaId": "clean_follies",
+      "phaseId": "act_1",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Bring bar rubbish bags to refuse room",
+      "position": "N/A",
+      "assignee": "N/A",
+      "assigneeType": "not_applicable",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH Follies Cleaning'!A6:K6"
+    },
+    {
+      "id": "CLA0059",
+      "areaId": "clean_follies",
+      "phaseId": "act_1",
+      "typeId": "cleaning",
+      "type": "Cleaning",
+      "text": "Wipe down all tables and table talkers - Follies & Erte",
+      "position": "Ticket Scanner 4",
+      "assignee": "Ticket Scanner 4",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK008",
+      "sourceCell": "'FOH Follies Cleaning'!A7:K7"
+    },
+    {
+      "id": "CLA0060",
+      "areaId": "clean_follies",
+      "phaseId": "act_1",
+      "typeId": "cleaning",
+      "type": "Cleaning",
+      "text": "Organise tables and chairs",
+      "position": "Ticket Scanner 4",
+      "assignee": "Ticket Scanner 4",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK008",
+      "sourceCell": "'FOH Follies Cleaning'!A8:K8"
+    },
+    {
+      "id": "CLA0061",
+      "areaId": "clean_follies",
+      "phaseId": "act_1",
+      "typeId": "restocking",
+      "type": "Restocking",
+      "text": "Take away plastic boxes after restocking",
+      "position": "N/A",
+      "assignee": "N/A",
+      "assigneeType": "not_applicable",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH Follies Cleaning'!A9:K9"
+    },
+    {
+      "id": "CLA0062",
+      "areaId": "clean_follies",
+      "phaseId": "act_1",
+      "typeId": "hoovering",
+      "type": "Hoovering",
+      "text": "Hoover lift, Foyer mats, curved stairs to Follies and stairs to Piano Room",
+      "position": "Welcome 1",
+      "assignee": "Welcome 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK010",
+      "sourceCell": "'FOH Follies Cleaning'!A10:K10"
+    },
+    {
+      "id": "CLA0063",
+      "areaId": "clean_follies",
+      "phaseId": "act_1",
+      "typeId": "hoovering",
+      "type": "Hoovering",
+      "text": "Hoover - Follies & Erte",
+      "position": "Welcome 2",
+      "assignee": "Welcome 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK011",
+      "sourceCell": "'FOH Follies Cleaning'!A11:K11"
+    },
+    {
+      "id": "CLA0064",
+      "areaId": "clean_follies",
+      "phaseId": "act_1",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Change bins - Foyer",
+      "position": "Ticket Scanner 2",
+      "assignee": "Ticket Scanner 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK006",
+      "sourceCell": "'FOH Follies Cleaning'!A12:K12"
+    },
+    {
+      "id": "CLA0065",
+      "areaId": "clean_follies",
+      "phaseId": "act_1",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Change bins – Follies & Erte",
+      "position": "Welcome 2",
+      "assignee": "Welcome 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK011",
+      "sourceCell": "'FOH Follies Cleaning'!A13:K13"
+    },
+    {
+      "id": "CLA0066",
+      "areaId": "clean_follies",
+      "phaseId": "act_1",
+      "typeId": "pickup",
+      "type": "Pick-up / Polycarb",
+      "text": "Prepare pick-up bags",
+      "position": "Access 1",
+      "assignee": "Access 1",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK014",
+      "sourceCell": "'FOH Follies Cleaning'!A14:K14"
+    },
+    {
+      "id": "CLA0067",
+      "areaId": "clean_follies",
+      "phaseId": "act_1",
+      "typeId": "merchandise",
+      "type": "Merchandise / Selling",
+      "text": "Put interval orders table up",
+      "position": "Ticket Scanner 4",
+      "assignee": "Ticket Scanner 4",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK008",
+      "sourceCell": "'FOH Follies Cleaning'!A15:K15"
+    },
+    {
+      "id": "CLA0068",
+      "areaId": "clean_follies",
+      "phaseId": "act_2",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Bring bar rubbish bags to refuse room",
+      "position": "N/A",
+      "assignee": "N/A",
+      "assigneeType": "not_applicable",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH Follies Cleaning'!A17:K17"
+    },
+    {
+      "id": "CLA0069",
+      "areaId": "clean_follies",
+      "phaseId": "act_2",
+      "typeId": "cleaning",
+      "type": "Cleaning",
+      "text": "Wipe down all tables and table talkers - Follies & Erte",
+      "position": "Ticket Scanner 4",
+      "assignee": "Ticket Scanner 4",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK008",
+      "sourceCell": "'FOH Follies Cleaning'!A18:K18"
+    },
+    {
+      "id": "CLA0070",
+      "areaId": "clean_follies",
+      "phaseId": "act_2",
+      "typeId": "cleaning",
+      "type": "Cleaning",
+      "text": "Organise tables and chairs",
+      "position": "Ticket Scanner 4",
+      "assignee": "Ticket Scanner 4",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK008",
+      "sourceCell": "'FOH Follies Cleaning'!A20:K20"
+    },
+    {
+      "id": "CLA0071",
+      "areaId": "clean_follies",
+      "phaseId": "act_2",
+      "typeId": "restocking",
+      "type": "Restocking",
+      "text": "Take away plastic boxes after restocking",
+      "position": "N/A",
+      "assignee": "N/A",
+      "assigneeType": "not_applicable",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH Follies Cleaning'!A21:K21"
+    },
+    {
+      "id": "CLA0072",
+      "areaId": "clean_follies",
+      "phaseId": "act_2",
+      "typeId": "hoovering",
+      "type": "Hoovering",
+      "text": "Hoover lift, mats, curved stairs to Follies and stairs to Piano Room",
+      "position": "Ticket Scanner 5",
+      "assignee": "Ticket Scanner 5",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK009",
+      "sourceCell": "'FOH Follies Cleaning'!A22:K22"
+    },
+    {
+      "id": "CLA0073",
+      "areaId": "clean_follies",
+      "phaseId": "act_2",
+      "typeId": "hoovering",
+      "type": "Hoovering",
+      "text": "Hoover - Follies & Erte",
+      "position": "Welcome 2",
+      "assignee": "Welcome 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK011",
+      "sourceCell": "'FOH Follies Cleaning'!A23:K23"
+    },
+    {
+      "id": "CLA0074",
+      "areaId": "clean_follies",
+      "phaseId": "act_2",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Change bins - Foyer",
+      "position": "Ticket Scanner 3",
+      "assignee": "Ticket Scanner 3",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK007",
+      "sourceCell": "'FOH Follies Cleaning'!A24:K24"
+    },
+    {
+      "id": "CLA0075",
+      "areaId": "clean_follies",
+      "phaseId": "act_2",
+      "typeId": "bin_refuse",
+      "type": "Bins / Refuse",
+      "text": "Change bins – Follies & Erte",
+      "position": "Welcome 2",
+      "assignee": "Welcome 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK011",
+      "sourceCell": "'FOH Follies Cleaning'!A25:K25"
+    },
+    {
+      "id": "CLA0076",
+      "areaId": "clean_follies",
+      "phaseId": "act_2",
+      "typeId": "hoovering",
+      "type": "Hoovering",
+      "text": "Empty hoover",
+      "position": "Ticket Scanner 5",
+      "assignee": "Ticket Scanner 5",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK009",
+      "sourceCell": "'FOH Follies Cleaning'!A26:K26"
+    },
+    {
+      "id": "CLA0077",
+      "areaId": "clean_follies",
+      "phaseId": "act_2",
+      "typeId": "other",
+      "type": "Other",
+      "text": "Foyer Mats put down",
+      "position": "ALL",
+      "assignee": "ALL",
+      "assigneeType": "all_tracks",
+      "matchedTrackId": "",
+      "sourceCell": "'FOH Follies Cleaning'!A27:K27"
+    },
+    {
+      "id": "CLA0078",
+      "areaId": "clean_follies",
+      "phaseId": "act_2",
+      "typeId": "other",
+      "type": "Other",
+      "text": "Empty Ash Tray",
+      "position": "Ticket Scanner 3",
+      "assignee": "Ticket Scanner 3",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK007",
+      "sourceCell": "'FOH Follies Cleaning'!A28:K28"
+    },
+    {
+      "id": "CLA0079",
+      "areaId": "clean_follies",
+      "phaseId": "act_2",
+      "typeId": "merchandise",
+      "type": "Merchandise / Selling",
+      "text": "Put interval orders table away",
+      "position": "Welcome 2",
+      "assignee": "Welcome 2",
+      "assigneeType": "track",
+      "matchedTrackId": "TRK011",
+      "sourceCell": "'FOH Follies Cleaning'!A29:K29"
     }
   ],
   "reviewItems": [

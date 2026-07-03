@@ -1,8 +1,8 @@
 {
-  "name": "Prince of Wales Accessibility Assistant",
-  "short_name": "POW Access",
+  "name": "DMT FOH Shift Guide",
+  "short_name": "DMT Guide",
   "id": "./",
-  "description": "Offline FOH shift assistant for Prince of Wales Theatre accessibility workflows.",
+  "description": "Offline FOH shift guide for Prince of Wales Theatre accessibility workflows.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

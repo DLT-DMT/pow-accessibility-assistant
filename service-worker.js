@@ -1,7 +1,7 @@
 importScripts("./version.js");
 
-const APP_VERSION = globalThis.POW_APP_VERSION || "4.0.0";
-const CACHE_NAME = `dmt-foh-shift-guide-${APP_VERSION}-pet-layout-1`;
+const APP_VERSION = globalThis.POW_APP_VERSION || "4.0.1";
+const CACHE_NAME = `dmt-foh-shift-guide-${APP_VERSION}`;
 
 const APP_FILES = [
   "./",
@@ -13,6 +13,7 @@ const APP_FILES = [
   "./data/master-data.js",
   "./data/master-data.json",
   "./assets/prince-of-wales-theatre-tower.jpg",
+  "./prince-edward-theatre.jpg",
   "./icons/icon.svg",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

@@ -1,4 +1,4 @@
-# DMT FOH Shift Guide V4.0.0
+# DMT FOH Shift Guide V4.0.1
 
 Includes the existing POW data unchanged, plus 30 PET positions and 766 duties from the confirmed PET workbook. Three not-applicable reference rows are omitted.
 
@@ -7,3 +7,5 @@ PET track summaries reflect the full assigned duties. Red means at least one dut
 Instruction feedback is stored on the device for each venue, track and mobility profile. Share or download shift feedback exports a text file. On supported phones, choose Mail from the share sheet. No email is sent automatically. Downloaded files can also be attached to an email or uploaded to this chat. Repeated edits to an instruction replace its saved note.
 
 Open index.html for a local preview. Publish the complete folder contents to the existing GitHub Pages repository root, preserving data/ and assets/ folders. Do not upload the Excel workbook or feedback files to the public repository.
+
+PET photograph: Adrian Pingstone (Arpingstone), 2005, public domain. Source: https://commons.wikimedia.org/wiki/File:Prince_Edward_Theatre_2005_-_Mary_Poppins.jpg

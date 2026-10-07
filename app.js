@@ -1,8 +1,8 @@
 const DEFAULT_PROFILE = "standard";
 const DEFAULT_SUPPORT_PROFILE = "rollator";
-const APP_VERSION_FALLBACK = "4.0.0";
+const APP_VERSION_FALLBACK = "4.0.1";
 
-const RELEASE_NOTES = [{version:"4.0.0",items:["Added Prince Edward Theatre with 30 positions and confirmed duty assessments.","Added mobility ratings and adjustment notes for each PET duty.","Added saved instruction feedback and phone sharing for both venues.","PET cleaning rota will be added when supplied."]},
+const RELEASE_NOTES = [{version:"4.0.1",items:["Added a Prince Edward Theatre photo that switches with your selected venue."]},{version:"4.0.0",items:["Added Prince Edward Theatre with 30 positions and confirmed duty assessments.","Added mobility ratings and adjustment notes for each PET duty.","Added saved instruction feedback and phone sharing for both venues.","PET cleaning rota will be added when supplied."]},
   {
     version: "3.0.0",
     items: [
@@ -165,7 +165,14 @@ function renderError() {
 
 function render() {
   document.querySelector('.production').textContent = state.data.theatres.find(t => t.id === state.theatreId)?.name || 'Choose your theatre';
-  document.querySelector('.brand-image').hidden = state.theatreId === 'THR002';
+  const isPet = state.theatreId === 'THR002';
+  const image = document.querySelector('.brand-image');
+  image.hidden = false;
+  image.src = isPet ? './prince-edward-theatre.jpg' : './assets/prince-of-wales-theatre-tower.jpg';
+  image.alt = isPet ? 'Prince Edward Theatre exterior on Old Compton Street' : 'Prince of Wales Theatre exterior on Coventry Street';
+  document.querySelector('.credits span').textContent = isPet
+    ? 'DMT FOH Shift Guide. Photo: Adrian Pingstone, Wikimedia Commons, public domain (2005).'
+    : 'DMT FOH Shift Guide. Photo crop: Bernard Gagnon, Wikimedia Commons, CC BY-SA 3.0 / GFDL.';
   renderStepTabs();
   elements.workflow.innerHTML = "";
 

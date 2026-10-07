@@ -1,8 +1,8 @@
 const DEFAULT_PROFILE = "standard";
 const DEFAULT_SUPPORT_PROFILE = "rollator";
-const APP_VERSION_FALLBACK = "3.0.0";
+const APP_VERSION_FALLBACK = "4.0.0";
 
-const RELEASE_NOTES = [
+const RELEASE_NOTES = [{version:"4.0.0",items:["Added Prince Edward Theatre with 30 positions and confirmed duty assessments.","Added mobility ratings and adjustment notes for each PET duty.","Added saved instruction feedback and phone sharing for both venues.","PET cleaning rota will be added when supplied."]},
   {
     version: "3.0.0",
     items: [
@@ -164,6 +164,8 @@ function renderError() {
 }
 
 function render() {
+  document.querySelector('.production').textContent = state.data.theatres.find(t => t.id === state.theatreId)?.name || 'Choose your theatre';
+  document.querySelector('.brand-image').hidden = state.theatreId === 'THR002';
   renderStepTabs();
   elements.workflow.innerHTML = "";
 
@@ -411,7 +413,11 @@ function renderShiftScreen() {
     runningOrder.append(createEmptyState("No tasks found for this selection"));
   }
 
-  panel.append(runningOrder);
+  if(state.theatreId === "THR002") panel.append(createReferenceSection("Your PET guide",["Ratings and adjustments reflect your confirmed workbook. A Red track includes duties that are not viable as assigned; individual accessible duties still show Green. Use instruction feedback to record changes from your shifts.","The separate PET cleaning rota has not yet been supplied. PET colleague support allocations are not listed yet; use the adjustment notes to arrange assistance."]));
+  panel.append(runningOrder, createActionRow([
+    createButton("Share shift feedback", "secondary-action", () => exportFeedback(false)),
+    createButton("Download shift feedback", "secondary-action", () => exportFeedback(true)),
+  ]));
   panel.append(createActionRow([
     createButton("Change details", "secondary-action", () => goToStep(2)),
     createButton("Quick Reference", "secondary-action", () => goToStep(5)),
@@ -456,6 +462,7 @@ function renderTrackStatus(access) {
 
 function renderQuickReferenceScreen() {
   const panel = createPanel("Quick Reference", "Operational aide memoire");
+  if(state.theatreId === "THR002") {panel.append(createReferenceSection("Prince Edward Theatre",["PET muster points, radio codes and emergency arrangements have not yet been verified in this guide. Use the current venue briefing and supervisor instructions."]),createButton("Back to Shift","secondary-action",()=>goToStep(4)));return panel;}
   panel.append(
     createReferenceSection("Calling 999", [
       "Reason for the call.",
@@ -544,13 +551,21 @@ function renderPhaseCard(phase) {
     list.className = "task-stack";
     const renderedCleaningAreas = new Set();
     ownTasks.forEach((task) => {
+      if (task.theatreId === "THR002") {
+        const item = createTaskItem(task.text);
+        const status = task.petStatuses?.[state.profileId] || "Unassessed";
+        const id = status === "Green" ? "suitable" : status === "Red" ? "not_suitable" : status === "Amber" ? "suitable_adjustments" : "not_applicable";
+        item.append(createStatusPill(status, id));
+        if(task.assessmentNote){const note=document.createElement("p");note.className="muted";note.textContent=task.assessmentNote;item.append(note);}
+        item.append(createFeedback(task));list.append(item);return;
+      }
       const visibleText = stripCleaningReference(task.text);
       const cleaningAreaIds = task.cleaningAreaIds?.length
         ? task.cleaningAreaIds
         : inferCleaningAreaIds(task.text);
 
       if (visibleText && !isAreaOnlyTask(visibleText, cleaningAreaIds)) {
-        list.append(createTaskItem(visibleText));
+        const item=createTaskItem(visibleText);item.append(createFeedback(task));list.append(item);
       }
 
       cleaningAreaIds.forEach((areaId) => {
@@ -593,7 +608,7 @@ function renderPhaseCard(phase) {
       title.textContent = task.title;
       const text = document.createElement("p");
       text.textContent = task.text;
-      item.append(title, text);
+      item.append(title, text, createFeedback({...task,id:`support-${task.id}`,text:task.text}));
       supportBlock.append(item);
     });
     card.append(supportBlock);
@@ -714,6 +729,7 @@ function renderCleaningBlock(areaId, assignments) {
   uniqueByText(assignments).forEach((assignment) => {
     const row = document.createElement("li");
     row.textContent = assignment.text;
+    row.append(createFeedback({...assignment,id:`cleaning-${assignment.id}`,text:assignment.text}));
     list.append(row);
   });
   block.append(heading, list);
@@ -779,6 +795,7 @@ function getPhaseAccessibility(trackId, phaseId, profileId) {
 }
 
 function getTrackStatusCounters(trackId, profileId) {
+  if(getTrack(trackId)?.theatreId === "THR002") return state.data.baselineTasks.filter(t=>t.trackId===trackId).reduce((c,t)=>{const v=t.petStatuses?.[profileId];if(v==="Green") c.suitable++;else if(v==="Red") c.not++;else c.adjust++;return c;},{suitable:0,adjust:0,not:0});
   if (profileId === DEFAULT_PROFILE) {
     const phasesWithTasks = new Set(
       state.data.baselineTasks
@@ -813,6 +830,7 @@ function getCleaningArea(areaId) {
 }
 
 function getCleaningAssignments(trackId, phaseId, areaId) {
+  if(getTrack(trackId)?.theatreId === "THR002") return [];
   return (state.data.cleaningAssignments || []).filter((assignment) => {
     if (assignment.areaId !== areaId) return false;
     if (assignment.phaseId !== phaseId) return false;
@@ -1032,4 +1050,25 @@ function applyAvailableUpdate() {
     return;
   }
   waitingServiceWorker.postMessage({ type: "SKIP_WAITING" });
+}
+
+function feedbackData(){try{return JSON.parse(localStorage.getItem("dmt-feedback-v4")||"{}");}catch{return {};}}
+function createFeedback(task){
+ const detail=document.createElement("details");const label=document.createElement("summary");label.textContent="Add feedback";
+ const input=document.createElement("textarea");input.placeholder="Was this instruction accurate and viable with your mobility aid?";input.setAttribute("aria-label","Feedback: "+task.text);input.rows=3;input.style.width="100%";
+ const theatreId=state.theatreId,trackId=state.trackId,profileId=state.profileId,key=[theatreId,trackId,profileId,task.id].join(":");input.value=feedbackData()[key]?.feedback||"";
+ const saved=document.createElement("small");saved.textContent="Saved on this device; export at the end of your shift.";
+ input.addEventListener("input",()=>{const all=feedbackData();all[key]={theatreId,trackId,profileId,taskId:task.id,instruction:task.text,feedback:input.value,updatedAt:new Date().toISOString()};try{localStorage.setItem("dmt-feedback-v4",JSON.stringify(all));saved.textContent="Saved on this device.";}catch{saved.textContent="Could not save on this device. Copy your note before leaving.";}});
+ detail.append(label,input,saved);return detail;
+}
+async function exportFeedback(downloadOnly=false){
+ const notes=Object.values(feedbackData()).filter(n=>n.theatreId===state.theatreId&&n.trackId===state.trackId&&n.profileId===state.profileId&&n.feedback.trim());
+ if(!notes.length){window.alert("Add feedback to an instruction first. Your notes are saved on this device.");return;}
+ const venue=state.data.theatres.find(t=>t.id===state.theatreId)?.name;
+ const track=getTrack(state.trackId)?.name,profile=getProfile(state.profileId)?.label;
+ const text=["DMT FOH Shift Guide — feedback",`App version: ${APP_VERSION_FALLBACK}`,`Venue: ${venue}`,`Track: ${track}`,`Mobility: ${profile}`,`Exported: ${new Date().toISOString()}`,"",...notes.flatMap(n=>[`Instruction ID: ${n.taskId}`,`Instruction: ${n.instruction}`,`Feedback: ${n.feedback}`,`Updated: ${n.updatedAt}`,""])].join("\n");
+ const filename="DMT-shift-feedback-"+new Date().toISOString().slice(0,10)+".txt";
+ const file=new File([text],filename,{type:"text/plain"});
+ try{if(!downloadOnly && navigator.canShare?.({files:[file]})){await navigator.share({title:`DMT feedback — ${track}`,files:[file]});return;}}catch(error){if(error.name==="AbortError")return;}
+ const url=URL.createObjectURL(file),a=document.createElement("a");a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }

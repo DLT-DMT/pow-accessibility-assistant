@@ -1,7 +1,7 @@
 importScripts("./version.js");
 
 const APP_VERSION = globalThis.POW_APP_VERSION || "4.0.0";
-const CACHE_NAME = `dmt-foh-shift-guide-${APP_VERSION}`;
+const CACHE_NAME = `dmt-foh-shift-guide-${APP_VERSION}-pet-layout-1`;
 
 const APP_FILES = [
   "./",

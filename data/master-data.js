@@ -1,10 +1,10 @@
 window.POW_MASTER_DATA = {
   "meta": {
-    "version": "4.0.0",
+    "version": "4.0.2",
     "generatedOn": "2026-07-03",
     "sourceWorkbook": "POW Accessibility Master Data v2.xlsx",
     "purpose": "Version 3 operational shift guide data.",
-    "petSource": "PET Accessibility Confirmed v3 repaired.xlsx",
+    "petSource": "PET Accessibility Confirmed v4.xlsx",
     "petAssessmentStatus": "Confirmed",
     "petAssessmentDate": "2026-10-07"
   },
@@ -4773,11 +4773,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0030; PET printed page 1",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Cross",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -5413,11 +5413,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0062; PET printed page 2",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Tick",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -6053,11 +6053,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0094; PET printed page 4",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Tick",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -6713,11 +6713,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0127; PET printed page 6",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unclear",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -7333,11 +7333,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0158; PET printed page 8",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -7873,11 +7873,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0185; PET printed page 9",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -8393,11 +8393,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0211; PET printed page 10",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -8993,11 +8993,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0241; PET printed page 11",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -9493,11 +9493,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0266; PET printed page 12",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -10013,11 +10013,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0292; PET printed page 13",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -10493,11 +10493,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0316; PET printed page 14",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -11013,11 +11013,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0342; PET printed page 15",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -11273,11 +11273,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0355; PET printed page 16",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -11377,7 +11377,7 @@ window.POW_MASTER_DATA = {
         "wheelchair": "Amber"
       },
       "annotation": "Square",
-      "assessmentNote": "I cannot access the Julie Andrews room in a wheelchair.",
+      "assessmentNote": "I can access the room with my stick while leaving the rollator outside, or by partially collapsing the rollator. Wheelchair access remains Amber.",
       "review": "Confirmed"
     },
     {
@@ -11614,10 +11614,10 @@ window.POW_MASTER_DATA = {
       "petStatuses": {
         "standard": "Green",
         "rollator": "Green",
-        "wheelchair": "Red"
+        "wheelchair": "Green"
       },
       "annotation": "Cross",
-      "assessmentNote": "I cannot carry out this duty in a wheelchair.",
+      "assessmentNote": "Ice cream preparation is a shared team task. I carry out the accessible parts with my stick, rollator or wheelchair. Colleagues cover inaccessible storage, carrying and other parts of the shared preparation.",
       "review": "Confirmed"
     },
     {
@@ -11633,11 +11633,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0373; PET printed page 17",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Green",
+        "rollator": "Red",
         "wheelchair": "Red"
       },
       "annotation": "Cross",
-      "assessmentNote": "I cannot carry out this duty in a wheelchair.",
+      "assessmentNote": "I cannot deliver the ice cream tray with a stick/rollator or wheelchair.",
       "review": "Confirmed"
     },
     {
@@ -11853,11 +11853,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0384; PET printed page 17",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Tick",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -12194,10 +12194,10 @@ window.POW_MASTER_DATA = {
       "petStatuses": {
         "standard": "Green",
         "rollator": "Green",
-        "wheelchair": "Red"
+        "wheelchair": "Green"
       },
       "annotation": "Cross",
-      "assessmentNote": "I cannot carry out this duty in a wheelchair.",
+      "assessmentNote": "Ice cream preparation is a shared team task. I carry out the accessible parts with my stick, rollator or wheelchair. Colleagues cover inaccessible storage, carrying and other parts of the shared preparation.",
       "review": "Confirmed"
     },
     {
@@ -12213,11 +12213,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0402; PET printed page 19",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Green",
+        "rollator": "Red",
         "wheelchair": "Red"
       },
       "annotation": "Cross",
-      "assessmentNote": "I cannot carry out this duty in a wheelchair.",
+      "assessmentNote": "I cannot deliver the ice cream tray with a stick/rollator or wheelchair.",
       "review": "Confirmed"
     },
     {
@@ -12433,11 +12433,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0413; PET printed page 19",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unclear",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -12734,10 +12734,10 @@ window.POW_MASTER_DATA = {
       "petStatuses": {
         "standard": "Green",
         "rollator": "Green",
-        "wheelchair": "Red"
+        "wheelchair": "Green"
       },
       "annotation": "Unclear",
-      "assessmentNote": "I cannot carry out this duty in a wheelchair.",
+      "assessmentNote": "Ice cream preparation is a shared team task. I carry out the accessible parts with my stick, rollator or wheelchair. Colleagues cover inaccessible storage, carrying and other parts of the shared preparation.",
       "review": "Confirmed"
     },
     {
@@ -12757,7 +12757,7 @@ window.POW_MASTER_DATA = {
         "wheelchair": "Red"
       },
       "annotation": "Cross",
-      "assessmentNote": "I cannot carry out this duty with a stick or rollator. I cannot carry out this duty in a wheelchair.",
+      "assessmentNote": "I cannot deliver the ice cream tray with a stick/rollator or wheelchair.",
       "review": "Confirmed"
     },
     {
@@ -12973,11 +12973,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0440; PET printed page 20",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unclear",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -13297,7 +13297,7 @@ window.POW_MASTER_DATA = {
         "wheelchair": "Green"
       },
       "annotation": "Tick",
-      "assessmentNote": "",
+      "assessmentNote": "Ice cream preparation is a shared team task. I carry out the accessible parts with my stick, rollator or wheelchair. Colleagues cover inaccessible storage, carrying and other parts of the shared preparation.",
       "review": "Confirmed"
     },
     {
@@ -13317,7 +13317,7 @@ window.POW_MASTER_DATA = {
         "wheelchair": "Red"
       },
       "annotation": "Cross",
-      "assessmentNote": "I cannot carry out this duty with a stick or rollator. I cannot carry out this duty in a wheelchair.",
+      "assessmentNote": "I cannot deliver the ice cream tray with a stick/rollator or wheelchair.",
       "review": "Confirmed"
     },
     {
@@ -13513,11 +13513,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0467; PET printed page 21",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unclear",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -13794,10 +13794,10 @@ window.POW_MASTER_DATA = {
       "petStatuses": {
         "standard": "Green",
         "rollator": "Green",
-        "wheelchair": "Red"
+        "wheelchair": "Green"
       },
       "annotation": "Cross",
-      "assessmentNote": "I cannot carry out this duty in a wheelchair.",
+      "assessmentNote": "Ice cream preparation is a shared team task. I carry out the accessible parts with my stick, rollator or wheelchair. Colleagues cover inaccessible storage, carrying and other parts of the shared preparation.",
       "review": "Confirmed"
     },
     {
@@ -13817,7 +13817,7 @@ window.POW_MASTER_DATA = {
         "wheelchair": "Red"
       },
       "annotation": "Cross",
-      "assessmentNote": "I cannot carry out this duty with a stick or rollator. I cannot carry out this duty in a wheelchair.",
+      "assessmentNote": "I cannot deliver the ice cream tray with a stick/rollator or wheelchair.",
       "review": "Confirmed"
     },
     {
@@ -14033,11 +14033,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0493; PET printed page 22",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Cross",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -14354,10 +14354,10 @@ window.POW_MASTER_DATA = {
       "petStatuses": {
         "standard": "Green",
         "rollator": "Green",
-        "wheelchair": "Red"
+        "wheelchair": "Green"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "",
+      "assessmentNote": "Ice cream preparation is a shared team task. I carry out the accessible parts with my stick, rollator or wheelchair. Colleagues cover inaccessible storage, carrying and other parts of the shared preparation.",
       "review": "Confirmed"
     },
     {
@@ -14377,7 +14377,7 @@ window.POW_MASTER_DATA = {
         "wheelchair": "Red"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "",
+      "assessmentNote": "I cannot deliver the ice cream tray with a stick/rollator or wheelchair.",
       "review": "Confirmed"
     },
     {
@@ -14573,11 +14573,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0520; PET printed page 23",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -15073,11 +15073,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0545; PET printed page 24",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Tick",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -15553,11 +15553,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0569; PET printed page 25",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Cross + square",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -15953,11 +15953,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0589; PET printed page 26",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -16353,11 +16353,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0609; PET printed page 27",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -16773,11 +16773,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0630; PET printed page 28",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unmarked",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -17213,11 +17213,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0652; PET printed page 29",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unclear",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -17613,11 +17613,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0672; PET printed page 30",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unclear",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -18173,11 +18173,11 @@ window.POW_MASTER_DATA = {
       "sourceCell": "Duties PET-T0700; PET printed page 31",
       "petStatuses": {
         "standard": "Green",
-        "rollator": "Red",
-        "wheelchair": "Red"
+        "rollator": "Amber",
+        "wheelchair": "Amber"
       },
       "annotation": "Unclear",
-      "assessmentNote": "I cannot carry out auditorium pick-up with a rollator or wheelchair because of balance and the size of the mobility aid.",
+      "assessmentNote": "For the pick-up part of this duty, I de-greet patrons from an accessible position with my stick/rollator or wheelchair. Colleagues carry out the pick-up, polycarb collection and liquids.",
       "review": "Confirmed"
     },
     {
@@ -18994,10 +18994,10 @@ window.POW_MASTER_DATA = {
       "petStatuses": {
         "standard": "Green",
         "rollator": "Green",
-        "wheelchair": "Red"
+        "wheelchair": "Green"
       },
       "annotation": "Tick + square",
-      "assessmentNote": "I cannot carry out this duty in a wheelchair.",
+      "assessmentNote": "Ice cream preparation is a shared team task. I carry out the accessible parts with my stick, rollator or wheelchair. Colleagues cover inaccessible storage, carrying and other parts of the shared preparation.",
       "review": "Confirmed"
     },
     {
@@ -20107,15 +20107,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 6 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET001",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 6 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20123,7 +20123,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 6 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20131,15 +20131,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET002",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20147,7 +20147,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20155,15 +20155,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET003",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20171,7 +20171,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20179,15 +20179,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 8 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET004",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 8 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20195,7 +20195,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 8 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20203,15 +20203,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 14 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 13 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET005",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 14 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 13 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20219,7 +20219,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 14 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 13 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20227,15 +20227,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 14 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET006",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 14 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20243,7 +20243,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 14 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20251,15 +20251,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 16 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET007",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 16 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20267,7 +20267,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 16 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20275,15 +20275,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 16 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET008",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 16 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20291,7 +20291,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 16 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20299,15 +20299,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 9 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 8 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET009",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 9 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 8 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20315,7 +20315,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 9 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 8 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20323,15 +20323,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 14 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET010",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 14 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20339,7 +20339,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 14 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20347,15 +20347,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 13 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 12 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET011",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 13 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 12 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20363,7 +20363,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 13 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 12 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20371,15 +20371,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 11 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 10 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET012",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 11 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 10 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20387,7 +20387,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 11 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 10 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. I need assistance setting up the ice cream tray when using a mobility aid. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20395,15 +20395,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 11 duties cannot be carried out as assigned. See the Red duties for the affected tasks. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 10 duties cannot be carried out as assigned. See the Red duties for the affected tasks. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET013",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 11 duties cannot be carried out as assigned. See the Red duties for the affected tasks. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 10 duties cannot be carried out as assigned. See the Red duties for the affected tasks. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20411,7 +20411,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 11 duties cannot be carried out as assigned. See the Red duties for the affected tasks. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else.",
+      "summary": "Wheelchair: 10 duties cannot be carried out as assigned. See the Red duties for the affected tasks. In a wheelchair, I can visually check the auditorium, with rubbish between rows retrieved by someone else. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20419,7 +20419,7 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 4 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20427,7 +20427,7 @@ window.POW_MASTER_DATA = {
       "profileId": "rollator",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 4 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20435,7 +20435,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 4 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20443,7 +20443,7 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 4 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Stick/rollator: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20451,7 +20451,7 @@ window.POW_MASTER_DATA = {
       "profileId": "rollator",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 4 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Stick/rollator: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20459,7 +20459,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 4 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Stick/rollator: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20467,7 +20467,7 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 13 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20475,7 +20475,7 @@ window.POW_MASTER_DATA = {
       "profileId": "rollator",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 13 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20483,7 +20483,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 13 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20491,7 +20491,7 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 16 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20499,7 +20499,7 @@ window.POW_MASTER_DATA = {
       "profileId": "rollator",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 16 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20507,7 +20507,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 16 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 15 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20515,7 +20515,7 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 14 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Stick/rollator: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 12 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20523,7 +20523,7 @@ window.POW_MASTER_DATA = {
       "profileId": "rollator",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 14 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Stick/rollator: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 12 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20531,7 +20531,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 14 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Stick/rollator: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 12 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20539,7 +20539,7 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 26 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Stick/rollator: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 24 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20547,7 +20547,7 @@ window.POW_MASTER_DATA = {
       "profileId": "rollator",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 26 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Stick/rollator: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 24 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20555,7 +20555,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 26 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Stick/rollator: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 24 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20563,7 +20563,7 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 6 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20571,7 +20571,7 @@ window.POW_MASTER_DATA = {
       "profileId": "rollator",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 6 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20579,7 +20579,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Stick/rollator: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 6 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20587,15 +20587,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Wheelchair: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET021",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20603,7 +20603,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 2 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Wheelchair: 1 duty cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20611,15 +20611,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 8 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET022",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 8 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20627,7 +20627,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 8 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20635,15 +20635,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 11 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Wheelchair: 10 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET023",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 11 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 10 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20651,7 +20651,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 11 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Wheelchair: 10 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20659,15 +20659,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 10 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Wheelchair: 9 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET024",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 10 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 9 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20675,7 +20675,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 10 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Wheelchair: 9 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20683,15 +20683,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 4 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Wheelchair: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET025",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 4 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20699,7 +20699,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 4 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Wheelchair: 3 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20707,15 +20707,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 12 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Wheelchair: 11 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET026",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 12 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 11 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20723,7 +20723,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 12 duties cannot be carried out as assigned. See the Red duties for the affected tasks.",
+      "summary": "Wheelchair: 11 duties cannot be carried out as assigned. See the Red duties for the affected tasks. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20731,15 +20731,15 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Wheelchair: 6 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
       "trackId": "PET027",
       "profileId": "rollator",
-      "statusId": "not_suitable",
-      "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "statusId": "suitable_adjustments",
+      "status": "Adjustments needed",
+      "summary": "Wheelchair: 6 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20747,7 +20747,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Stick/rollator: 1 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Wheelchair: 7 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Wheelchair: 6 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. With a stick/rollator or wheelchair, I de-greet from an accessible position while colleagues carry out pick-up, polycarb collection and liquids.",
       "requiredAdjustment": ""
     },
     {
@@ -20779,7 +20779,7 @@ window.POW_MASTER_DATA = {
       "profileId": "standard",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Wheelchair: 6 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Wheelchair: 5 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20787,7 +20787,7 @@ window.POW_MASTER_DATA = {
       "profileId": "rollator",
       "statusId": "suitable",
       "status": "Accessible with stated arrangements",
-      "summary": "Wheelchair: 6 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Wheelchair: 5 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {
@@ -20795,7 +20795,7 @@ window.POW_MASTER_DATA = {
       "profileId": "wheelchair",
       "statusId": "not_suitable",
       "status": "Includes duties not viable as assigned",
-      "summary": "Wheelchair: 6 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift.",
+      "summary": "Wheelchair: 5 duties cannot be carried out as assigned. See the Red duties for the affected tasks. Equipment must be brought to me on every shift. Ice cream preparation is shared across the team, with colleagues covering inaccessible parts.",
       "requiredAdjustment": ""
     },
     {

@@ -1,7 +1,7 @@
 importScripts("./version.js");
 
 const APP_VERSION = globalThis.POW_APP_VERSION || "4.1.0";
-const CACHE_NAME = `dmt-foh-shift-guide-${APP_VERSION}`;
+const CACHE_NAME = `dmt-foh-shift-guide-${APP_VERSION}-r2`;
 
 const APP_FILES = [
   "./",
@@ -21,7 +21,7 @@ const APP_FILES = [
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_FILES)),
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_FILES.map((url) => new Request(url, { cache: "reload" })))),
   );
 });
 

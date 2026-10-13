@@ -824,3 +824,53 @@ select {
     display: grid;
   }
 }
+
+/* PET 4.1 accessibility dashboard and knowledge guide */
+input,textarea {font:inherit;font-size:16px;max-width:100%;}
+input:focus-visible,textarea:focus-visible,summary:focus-visible,a:focus-visible {outline:3px solid var(--focus);outline-offset:3px;}
+.pet-totals {display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0 10px;}
+.pet-total {padding:18px 12px;border-radius:12px;font-size:1.4rem;font-weight:700;text-align:center;}
+.pet-track-grid {grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:16px;}
+.pet-track-grid .track-card {padding:14px;min-height:105px;}
+.pet-duty-row {display:grid;grid-template-columns:minmax(0,1.3fr) 100px minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--line);}
+.pet-duty-row [role=cell] {min-width:0;line-height:1.5;}
+.pet-duty-head {font-size:.9rem;color:var(--muted);}
+.pet-duty-row .status-pill {margin-bottom:8px;}
+.pet-duty-row details {margin-top:12px;}
+.pet-duty-row textarea {display:block;width:100%;margin:8px 0;}
+.pet-knowledge {display:grid;gap:16px;margin:16px 0 28px;}
+.pet-knowledge input {width:100%;padding:16px;border:2px solid var(--focus);border-radius:10px;background:white;color:var(--ink);}
+.pet-answers {display:grid;gap:10px;max-height:65vh;overflow:auto;padding:3px;}
+.pet-answer {background:var(--surface-strong);border:1px solid var(--line);border-radius:10px;padding:16px;}
+.pet-answer summary {cursor:pointer;font-weight:700;line-height:1.5;}
+.pet-answer-text {font-size:1.2rem;line-height:1.6;white-space:pre-line;margin:16px 0;}
+.pet-answer small {display:block;color:var(--muted);margin-bottom:12px;}
+.pet-caution {padding:12px;margin-top:12px;background:var(--adjust-soft);line-height:1.5;}
+.reference-section>a {display:inline-block;padding:10px 0;}
+[aria-pressed=true].secondary-action {outline:2px solid var(--focus);background:var(--blue-soft);}
+@media(max-width:600px){.pet-duty-head{display:none;}.pet-duty-row{grid-template-columns:1fr;gap:10px;}.pet-duty-row [role=cell]:before{content:attr(data-label);display:block;font-weight:700;font-size:.8rem;color:var(--muted);margin-bottom:5px;}.pet-track-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.pet-track-grid .track-card-top{align-items:flex-start;flex-direction:column;}.pet-total{font-size:1.1rem;padding:14px 6px;}}
+
+.pet-design{--navy:#1c1b49;--blue:#33325f;--blue-soft:#eeedf9;--page:#f0eff8;--ink:#19183e;--line:#dcdcec;}
+.pet-design .top-bar{background:#1c1b49;color:white;border-radius:16px;padding:20px;margin-bottom:18px;}
+.pet-design .top-bar .muted,.pet-design .top-bar .production{color:#cfcee7;}
+.pet-design .top-bar button{color:inherit;}
+.pet-totals{grid-template-columns:repeat(4,1fr);}
+.pet-total{display:flex;flex-direction:column;gap:5px;border:1px solid currentColor;}
+.pet-total strong{font-size:2rem;}.pet-total span{text-transform:uppercase;font-size:.85rem;}
+.pet-total.is-suitable{background:#148252;color:white;}.pet-total.is-adjustment{background:#e9a515;color:#251e0f;}.pet-total.is-not{background:#b72d3e;color:white;}
+.pet-duty-head{background:#e3e1f5;padding:12px;border-radius:8px 8px 0 0;color:#19183e;}
+.pet-duty-row:not(.pet-duty-head){padding:16px 12px;}.pet-duty-row:nth-child(odd){background:#f8f7fc;}
+.pet-duty-row small{display:block;font-size:.8rem;color:var(--muted);}
+.pet-track-nav{display:flex;gap:8px;overflow-x:auto;padding:12px 0;scroll-snap-type:x proximity;}
+.pet-nav-tile{flex:0 0 128px;border:1px solid var(--line);border-radius:9px;padding:12px 8px;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:space-between;scroll-snap-align:start;min-height:96px;font-size:.85rem;}
+.pet-nav-tile[aria-current=page]{outline:3px solid var(--focus);outline-offset:-3px;}
+.pet-design .track-status{border-radius:12px;border:1px solid var(--line);}
+.pet-design .dashboard-header h2{font-size:2.4rem;}
+@media(max-width:600px){.pet-total strong{font-size:1.6rem;}.pet-total span{font-size:.7rem;}.pet-totals{gap:6px;}.pet-design .dashboard-header h2{font-size:2rem;}.pet-design .top-bar{padding:14px;}.pet-track-nav{position:sticky;bottom:0;background:var(--page);z-index:2;}.pet-nav-tile{flex-basis:112px;}}
+
+.pet-design .brand-row .eyebrow,.pet-design .brand-copy>p:first-child{color:#cfcee7;}
+
+.pet-design .top-bar .venue{color:#cfcee7;}
+
+.pet-design .step-tabs { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+@media(max-width:640px){.pet-design .step-tabs{grid-template-columns:repeat(3,minmax(0,1fr));}}

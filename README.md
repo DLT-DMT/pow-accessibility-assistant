@@ -1,11 +1,17 @@
-# DMT FOH Shift Guide V4.0.1
+# DMT FOH Shift Guide V4.1.0
 
-Includes the existing POW data unchanged, plus 30 PET positions and 766 duties from the confirmed PET workbook. Three not-applicable reference rows are omitted.
+This release preserves the POW data and adds confirmed PET whole-role assessments, a refreshed dashboard and searchable briefing answers.
 
-PET track summaries reflect the full assigned duties. Red means at least one duty is not viable as assigned. Individual duty ratings and adjustment notes remain visible. PET cleaning rotas and colleague support allocations have not been added.
+PET has 32 positions: 30 original position sheets plus two clearly labelled agreed kiosk role summaries. Wheelchair totals are 11 Green, 1 Amber and 20 Red. Walking stick/rollator totals are 11 Green, 7 Amber and 14 Red. Green means the core role is accessible with the stated arrangements. Reassigned duties are displayed Amber while original physical restrictions remain in the source data. The user’s agreed PEEP replaces standard evacuation and clearance responsibilities. Grand Circle core roles remain Red. Interval Orders/Foyer Seller retains its existing rating because a new Green assessment was not agreed.
 
-Instruction feedback is stored on the device for each venue, track and mobility profile. Share or download shift feedback exports a text file. On supported phones, choose Mail from the share sheet. No email is sent automatically. Downloaded files can also be attached to an email or uploaded to this chat. Repeated edits to an instruction replace its saved note.
+The offline briefing guide contains exactly 105 supplied questions and answers from PET Breifing ANSWERS.docx. Search reads both questions and answers. The separate Briefing Quiz page opens search matches and lets users tap other questions to reveal answers. Quick Reference is a static list of contacts, codes and muster points, without quiz search. Original wording is retained. Separate notes clarify specific source limitations without changing answers.
 
-Open index.html for a local preview. Publish the complete folder contents to the existing GitHub Pages repository root, preserving data/ and assets/ folders. Do not upload the Excel workbook or feedback files to the public repository.
+Quick Reference includes confirmed PET radio codes, three muster points, walking-directions links and Stage Door telephone/extension. Maps require internet and are not approved step-free evacuation routes. Remaining telephone collection prompts and general reference feedback save on the device.
 
-PET photograph: Adrian Pingstone (Arpingstone), 2005, public domain. Source: https://commons.wikimedia.org/wiki/File:Prince_Edward_Theatre_2005_-_Mary_Poppins.jpg
+Instruction feedback remains under the existing dmt-feedback-v4 storage key. Briefing questions and answers are read-only and have no feedback or editing controls. Share opens the phone share sheet where supported; Download provides a text file. Nothing is emailed or uploaded automatically.
+
+The authoritative release workbook is PET Accessibility Master v6.xlsx, stored locally outside the public app. Never publish workbooks, personal feedback exports, private medical information or local QA files to the repository.
+
+Deploy the app root files and data/master-data.js plus data/master-data.json together. Preview/test HTML files are local-only. The versioned service worker caches the full app and briefing data. Existing users are offered an update before activation.
+
+PET photograph: Adrian Pingstone, 2005, public domain. https://commons.wikimedia.org/wiki/File:Prince_Edward_Theatre_2005_-_Mary_Poppins.jpg

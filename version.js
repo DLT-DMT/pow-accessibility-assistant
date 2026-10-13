@@ -1,1 +1,1 @@
-globalThis.POW_APP_VERSION = "4.0.1";
+globalThis.POW_APP_VERSION = "4.1.0";

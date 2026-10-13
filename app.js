@@ -1,8 +1,8 @@
 const DEFAULT_PROFILE = "standard";
 const DEFAULT_SUPPORT_PROFILE = "rollator";
-const APP_VERSION_FALLBACK = "4.0.1";
+const APP_VERSION_FALLBACK = "4.1.0";
 
-const RELEASE_NOTES = [{version:"4.0.1",items:["Added a Prince Edward Theatre photo that switches with your selected venue."]},{version:"4.0.0",items:["Added Prince Edward Theatre with 30 positions and confirmed duty assessments.","Added mobility ratings and adjustment notes for each PET duty.","Added saved instruction feedback and phone sharing for both venues.","PET cleaning rota will be added when supplied."]},
+const RELEASE_NOTES = [{version:"4.1.0",items:["Updated PET whole-track ratings using agreed working arrangements for both mobility profiles.","Added 105 searchable briefing answers, confirmed code words, muster points and Stage Door contact details.","Added RAG totals, compact track tiles and duty assessment tables.","Added Stalls Kiosk and Foyer Kiosk agreed role summaries."]},{version:"4.0.2",items:["Applied first shift feedback: shared ice cream preparation, tray delivery and room access notes.","Pick-up duties now show Amber with de-greeting as the adjusted role.","20 PET tracks changed from Red to Amber for stick/rollator use.","Door A and Door B are Amber for wheelchair use with confirmed adjustments and reassignments.","Adjustment notes now match your selected mobility profile; Standard Duties hides mobility notes."]},{version:"4.0.1",items:["Added a Prince Edward Theatre photo that switches with your selected venue."]},{version:"4.0.0",items:["Added Prince Edward Theatre with 30 positions and confirmed duty assessments.","Added mobility ratings and adjustment notes for each PET duty.","Added saved instruction feedback and phone sharing for both venues.","PET cleaning rota will be added when supplied."]},
   {
     version: "3.0.0",
     items: [
@@ -166,6 +166,7 @@ function renderError() {
 function render() {
   document.querySelector('.production').textContent = state.data.theatres.find(t => t.id === state.theatreId)?.name || 'Choose your theatre';
   const isPet = state.theatreId === 'THR002';
+  document.body.classList.toggle('pet-design',isPet);
   const image = document.querySelector('.brand-image');
   image.hidden = false;
   image.src = isPet ? './prince-edward-theatre.jpg' : './assets/prince-of-wales-theatre-tower.jpg';
@@ -184,6 +185,9 @@ function render() {
     elements.workflow.append(renderSupportScreen());
   } else if (state.step === 4) {
     elements.workflow.append(renderShiftScreen());
+  } else if (state.step === 6 && isPet) {
+    const panel=createPanel("Briefing Quiz", "105 original questions and answers");
+    panel.append(createPetKnowledge());elements.workflow.append(panel);
   } else {
     elements.workflow.append(renderQuickReferenceScreen());
   }
@@ -193,13 +197,13 @@ function render() {
 
 function renderStepTabs() {
   elements.stepTabs.replaceChildren(
-    ...stepLabels.map((label, index) => {
+    ...(state.theatreId === "THR002" ? [...stepLabels,"Briefing Quiz"] : stepLabels).map((label, index) => {
       const stepNumber = index + 1;
       const button = document.createElement("button");
       button.type = "button";
       button.className = stepNumber === state.step ? "step-tab active" : "step-tab";
       button.textContent = label;
-      button.disabled = stepNumber > state.step;
+      button.disabled = stepNumber > state.step && !(state.theatreId === "THR002" && stepNumber >= 5);
       button.addEventListener("click", () => {
         state.step = stepNumber;
         render();
@@ -239,6 +243,7 @@ function renderTheatreScreen() {
     theatreList.append(button);
   });
 
+  if(state.theatreId === "THR002") panel.append(createButton("PET Quick Reference", "secondary-action", ()=>goToStep(5)));
   panel.append(theatreList, createActionRow([
     createButton("Continue", "primary-action", () => goToStep(2)),
   ]));
@@ -328,9 +333,10 @@ function renderTrackOverview({ profileId, selectedTrackId, onSelect, title = "Se
   profile.textContent = `${profileIcon(profileId)} ${getProfile(profileId)?.label || ""}`;
   heading.append(label, profile);
   wrapper.append(heading);
+  if(state.theatreId === "THR002") wrapper.append(renderPetTotals(profileId));
 
   const grid = document.createElement("div");
-  grid.className = "track-card-grid";
+  grid.className = state.theatreId === "THR002" ? "track-card-grid pet-track-grid" : "track-card-grid";
   getTracksForTheatre().forEach((track) => {
     const access = getTrackAccessibility(track.id, profileId);
     const statusId = access?.statusId || "review_required";
@@ -365,7 +371,8 @@ function renderTrackOverview({ profileId, selectedTrackId, onSelect, title = "Se
       createCounterChip("Not", counters.not),
     );
 
-    button.append(top, statusLine, counterRow);
+    button.append(top, statusLine);
+    if(state.theatreId !== "THR002") button.append(counterRow);
     grid.append(button);
   });
 
@@ -400,8 +407,10 @@ function renderShiftScreen() {
 
   header.append(headingBlock);
   panel.append(header);
+  if(track?.summaryOnly) panel.append(createReferenceSection("Agreed role summary",[track.notes]));
 
-  panel.append(renderShiftSummary(track, profile, supportTrack, supportProfile, supportTasks));
+  if(state.theatreId === "THR002") panel.prepend(renderPetTotals(state.profileId));
+  if(state.theatreId !== "THR002" || state.supporting) panel.append(renderShiftSummary(track, profile, supportTrack, supportProfile, supportTasks));
 
   if (ownAccess && state.profileId !== DEFAULT_PROFILE) {
     panel.append(renderTrackStatus(ownAccess));
@@ -420,8 +429,10 @@ function renderShiftScreen() {
     runningOrder.append(createEmptyState("No tasks found for this selection"));
   }
 
-  if(state.theatreId === "THR002") panel.append(createReferenceSection("Your PET guide",["Ratings and adjustments reflect your confirmed workbook. A Red track includes duties that are not viable as assigned; individual accessible duties still show Green. Use instruction feedback to record changes from your shifts.","The separate PET cleaning rota has not yet been supplied. PET colleague support allocations are not listed yet; use the adjustment notes to arrange assistance."]));
-  panel.append(runningOrder, createActionRow([
+  if(state.theatreId === "THR002") {const guide=document.createElement("details");const guideLabel=document.createElement("summary");guideLabel.textContent="How to read your PET ratings";guide.append(guideLabel,createReferenceSection("Your PET guide",["Track colours describe the agreed working role. Green can include established adjustments or reassignments. The duty table shows the adjusted assignment. Reassigned duties are Amber, with the original Red limitation retained where relevant. My PEEP replaces standard evacuation and clearance duties.","The separate PET cleaning rota has not yet been supplied. Reassigned duties and other support arrangements are stated alongside the relevant instructions."]));panel.append(guide);}
+  panel.append(runningOrder);
+  if(state.theatreId === "THR002") panel.append(renderPetTrackNavigation());
+  panel.append(createActionRow([
     createButton("Share shift feedback", "secondary-action", () => exportFeedback(false)),
     createButton("Download shift feedback", "secondary-action", () => exportFeedback(true)),
   ]));
@@ -458,9 +469,9 @@ function renderTrackStatus(access) {
   card.className = `track-status ${statusClass(access.statusId)}`;
   const label = document.createElement("p");
   label.className = "panel-label";
-  label.textContent = "Overall status";
+  label.textContent = state.theatreId === "THR002" ? "Reason for "+ragLabel(access.statusId) : "Overall status";
   const status = document.createElement("strong");
-  status.textContent = access.status;
+  status.textContent = state.theatreId === "THR002" ? ragLabel(access.statusId)+" — "+access.status : access.status;
   const summary = document.createElement("p");
   summary.textContent = access.summary || access.requiredAdjustment;
   card.append(label, status, summary);
@@ -469,7 +480,9 @@ function renderTrackStatus(access) {
 
 function renderQuickReferenceScreen() {
   const panel = createPanel("Quick Reference", "Operational aide memoire");
-  if(state.theatreId === "THR002") {panel.append(createReferenceSection("Prince Edward Theatre",["PET muster points, radio codes and emergency arrangements have not yet been verified in this guide. Use the current venue briefing and supervisor instructions."]),createButton("Back to Shift","secondary-action",()=>goToStep(4)));return panel;}
+  if(state.theatreId === "THR002") {
+    panel.append(createReferenceSection("PET code words",["Mr Jet — Fire","Mr Wick — Bomb / suspicious package","Mrs Green — Aggressive or disruptive patron; security will attend"]),createPetMusterPoints(),createPetContacts(),createPetReferenceCollection(),createButton("Back to Shift","secondary-action",()=>goToStep(4)));return panel;
+  }
   panel.append(
     createReferenceSection("Calling 999", [
       "Reason for the call.",
@@ -555,16 +568,12 @@ function renderPhaseCard(phase) {
 
   if (ownTasks.length) {
     const list = document.createElement("div");
-    list.className = "task-stack";
+    list.className = state.theatreId === "THR002" ? "task-stack pet-duty-table" : "task-stack";
+    if(state.theatreId === "THR002"){list.setAttribute("role","table");list.setAttribute("aria-label",phase.label+" duties");const h=document.createElement("div");h.className="pet-duty-row pet-duty-head";h.setAttribute("role","row");for(const title of ["Instruction","Duty rating","My arrangement"]){const c=document.createElement("strong");c.setAttribute("role","columnheader");c.textContent=title;h.append(c);}list.append(h);}
     const renderedCleaningAreas = new Set();
     ownTasks.forEach((task) => {
       if (task.theatreId === "THR002") {
-        const item = createTaskItem(task.text);
-        const status = task.petStatuses?.[state.profileId] || "Unassessed";
-        const id = status === "Green" ? "suitable" : status === "Red" ? "not_suitable" : status === "Amber" ? "suitable_adjustments" : "not_applicable";
-        item.append(createStatusPill(status, id));
-        if(task.assessmentNote){const note=document.createElement("p");note.className="muted";note.textContent=task.assessmentNote;item.append(note);}
-        item.append(createFeedback(task));list.append(item);return;
+        list.append(renderPetDutyRow(task)); return;
       }
       const visibleText = stripCleaningReference(task.text);
       const cleaningAreaIds = task.cleaningAreaIds?.length
@@ -802,7 +811,7 @@ function getPhaseAccessibility(trackId, phaseId, profileId) {
 }
 
 function getTrackStatusCounters(trackId, profileId) {
-  if(getTrack(trackId)?.theatreId === "THR002") return state.data.baselineTasks.filter(t=>t.trackId===trackId).reduce((c,t)=>{const v=t.petStatuses?.[profileId];if(v==="Green") c.suitable++;else if(v==="Red") c.not++;else c.adjust++;return c;},{suitable:0,adjust:0,not:0});
+  if(getTrack(trackId)?.theatreId === "THR002") return state.data.baselineTasks.filter(t=>t.trackId===trackId).reduce((c,t)=>{const v=t.petStatuses?.[profileId];if(t.petReassigned?.[profileId]) c.adjust++;else if(v==="Green") c.suitable++;else if(v==="Red") c.not++;else if(v==="Amber") c.adjust++;return c;},{suitable:0,adjust:0,not:0});
   if (profileId === DEFAULT_PROFILE) {
     const phasesWithTasks = new Set(
       state.data.baselineTasks
@@ -1063,7 +1072,7 @@ function feedbackData(){try{return JSON.parse(localStorage.getItem("dmt-feedback
 function createFeedback(task){
  const detail=document.createElement("details");const label=document.createElement("summary");label.textContent="Add feedback";
  const input=document.createElement("textarea");input.placeholder="Was this instruction accurate and viable with your mobility aid?";input.setAttribute("aria-label","Feedback: "+task.text);input.rows=3;input.style.width="100%";
- const theatreId=state.theatreId,trackId=state.trackId,profileId=state.profileId,key=[theatreId,trackId,profileId,task.id].join(":");input.value=feedbackData()[key]?.feedback||"";
+ const theatreId=state.theatreId,trackId=task.id.startsWith("PET-Q")?"reference":state.trackId,profileId=task.id.startsWith("PET-Q")?"all":state.profileId,key=[theatreId,trackId,profileId,task.id].join(":");input.value=feedbackData()[key]?.feedback||"";
  const saved=document.createElement("small");saved.textContent="Saved on this device; export at the end of your shift.";
  input.addEventListener("input",()=>{const all=feedbackData();all[key]={theatreId,trackId,profileId,taskId:task.id,instruction:task.text,feedback:input.value,updatedAt:new Date().toISOString()};try{localStorage.setItem("dmt-feedback-v4",JSON.stringify(all));saved.textContent="Saved on this device.";}catch{saved.textContent="Could not save on this device. Copy your note before leaving.";}});
  detail.append(label,input,saved);return detail;
@@ -1078,4 +1087,124 @@ async function exportFeedback(downloadOnly=false){
  const file=new File([text],filename,{type:"text/plain"});
  try{if(!downloadOnly && navigator.canShare?.({files:[file]})){await navigator.share({title:`DMT feedback — ${track}`,files:[file]});return;}}catch(error){if(error.name==="AbortError")return;}
  const url=URL.createObjectURL(file),a=document.createElement("a");a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+
+function petReferenceData(){try{return JSON.parse(localStorage.getItem("dmt-pet-reference-v1")||"{}");}catch{return {};}}
+function createPetReferenceCollection(){
+ const details=document.createElement("details");
+ const title=document.createElement("summary");title.textContent="Add missing contact details or reference feedback";
+ details.append(title,createPetReferenceFeedback());return details;
+}
+function createPetReferenceFeedback(){
+ const section=document.createElement("section");section.className="reference-section";
+ const title=document.createElement("h3");title.textContent="Gather PET quick reference information";
+ const intro=document.createElement("p");intro.textContent="Use these prompts during your shift. Record telephone numbers or extensions and check who each number reaches. These are your collection notes until added to the guide.";
+ section.append(title,intro);
+ const prompts=[
+ ["general-manager","Amy, General Manager — surname and telephone / extension"],
+ ["theatre-manager","Sam Rippon, Theatre Manager — direct number / extension (if different from main)"],
+ ["duty-manager","Duty Manager — telephone / extension"],
+ 
+ ["bars-foyers","Each bar / foyer — list its name, telephone / extension and how to dial it"],
+ 
+ 
+ ["other","Other quick reference feedback — missing information or corrections"]];
+ const saved=document.createElement("p");saved.textContent="Notes save on this device as you type. Share or download them to send to yourself.";
+ for(const [id,prompt] of prompts){const label=document.createElement("label");label.style.display="block";label.style.margin="16px 0";label.textContent=prompt;
+ const input=document.createElement("textarea");input.rows=id==="bars-foyers"?5:2;input.style.width="100%";input.style.display="block";input.setAttribute("aria-label",prompt);input.placeholder=id==="bars-foyers"?"One location per line: name — number / extension — dialing instructions":"To collect on shift…";input.value=petReferenceData()[id]?.value||"";
+ input.addEventListener("input",()=>{const all=petReferenceData();all[id]={prompt,value:input.value,updatedAt:new Date().toISOString()};try{localStorage.setItem("dmt-pet-reference-v1",JSON.stringify(all));saved.textContent="Saved on this device. Share or download when ready.";}catch{saved.textContent="Could not save. Copy your notes before leaving this page.";}});label.append(input);section.append(label);}
+ section.append(saved,createActionRow([createButton("Share quick reference feedback","primary-action",()=>exportPetReference()),createButton("Download quick reference feedback","secondary-action",()=>exportPetReference(true))]));return section;
+}
+async function exportPetReference(downloadOnly=false){
+ const notes=Object.values(petReferenceData()).filter(n=>n.value.trim());
+
+ if(!notes.length){window.alert("Add a contact number or quick reference note first.");return;}
+ const text=["DMT FOH Shift Guide — quick reference feedback",`App version: ${APP_VERSION_FALLBACK}`,"Venue: Prince Edward Theatre",`Exported: ${new Date().toISOString()}`,"",...notes.flatMap(n=>[n.prompt,n.value,`Updated: ${n.updatedAt}`,""])].join("\n");
+ const file=new File([text],"PET-quick-reference-feedback-"+new Date().toISOString().slice(0,10)+".txt",{type:"text/plain"});
+ try{if(!downloadOnly&&navigator.canShare?.({files:[file]})){await navigator.share({title:"PET quick reference feedback",files:[file]});return;}}catch(error){if(error.name==="AbortError")return;}
+ const url=URL.createObjectURL(file),a=document.createElement("a");a.href=url;a.download=file.name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+
+function renderPetTotals(profileId){
+ const area=document.createElement("div");area.className="pet-totals";
+ for(const [id,label] of [["suitable","Green"],["suitable_adjustments","Amber"],["not_suitable","Red"],["total","Total"]]){
+  const n=id==="total"?getTracksForTheatre().length:getTracksForTheatre().filter(t=>getTrackAccessibility(t.id,profileId)?.statusId===id).length;
+  const el=document.createElement("div");el.className="pet-total "+statusClass(id);const number=document.createElement("strong");number.textContent=n;const title=document.createElement("span");title.textContent=label;el.append(number,title);area.append(el);
+ }
+ const help=document.createElement("p");help.className="muted";help.textContent="Whole-track ratings include agreed arrangements. Open a track to see its duties and adjustments.";
+ const wrap=document.createElement("div");wrap.append(area,help);return wrap;
+}
+function renderPetDutyRow(task){
+ const row=document.createElement("div");row.className="pet-duty-row";row.setAttribute("role","row");
+ const instruction=document.createElement("div");instruction.setAttribute("role","cell");instruction.dataset.label="Instruction";
+ const t=document.createElement("p");t.textContent=task.text;instruction.append(t,createFeedback(task));
+ const rating=document.createElement("div");rating.setAttribute("role","cell");rating.dataset.label="Duty rating";
+ const original=task.petStatuses?.[state.profileId]||"Unassessed";const v=task.petReassigned?.[state.profileId]?"Amber":original;rating.append(createStatusPill(v,v==="Green"?"suitable":v==="Red"?"not_suitable":"suitable_adjustments"));
+ if(original!==v&&original==="Red"){const small=document.createElement("small");small.textContent="Original duty: Red";rating.append(small);}
+ const arrangement=document.createElement("div");arrangement.setAttribute("role","cell");arrangement.dataset.label="My arrangement";
+ const treatment=task.petTreatment?.[state.profileId];
+ if(state.profileId!==DEFAULT_PROFILE&&treatment&&treatment!=="As assigned")arrangement.append(createStatusPill(treatment,"suitable_adjustments"));
+ const note=document.createElement("p");note.textContent=state.profileId===DEFAULT_PROFILE?"Standard duties":task.petAdjustmentNotes?.[state.profileId]||"No adjustment required.";arrangement.append(note);
+ row.append(instruction,rating,arrangement);return row;
+}
+function createPetContacts(){
+ const section=createReferenceSection("PET management and telephone numbers",[]);
+ for(const contact of state.data.petContacts||[]){
+  const card=document.createElement("div");card.style.margin="16px 0";
+  const title=document.createElement("h4");title.textContent=contact.role+(contact.name?" — "+contact.name:"");card.append(title);
+  const scope=document.createElement("p");scope.textContent=contact.scope;card.append(scope);
+  for(const number of contact.phones){const line=document.createElement("p"),tel=document.createElement("a");tel.href="tel:+44"+number.replace(/\s/g,"").slice(1);tel.textContent="Main: "+number;line.append(tel);card.append(line);}
+  if(!contact.phones.length){const note=document.createElement("p");note.textContent="Telephone / extension to collect";card.append(note);}
+  section.append(card);
+ }
+ return section;
+}
+function createPetMusterPoints(){
+ const section=document.createElement("section");section.className="reference-section";
+ const title=document.createElement("h3");title.textContent="PET emergency muster points";section.append(title);
+ for(const [name,destination] of [["1. St Patrick’s Church, Soho Square","St Patrick's Church, 21a Soho Square, London"],["2. Gielgud Theatre Stage Door, Winnett Street","Gielgud Theatre Stage Door, Winnett Street, London"],["3. Prince of Wales Theatre Stage Door, Whitcomb Street","Prince of Wales Theatre Stage Door, Whitcomb Street, London"]]){
+  const p=document.createElement("p");p.textContent=name;const a=document.createElement("a");a.textContent="Open walking directions";a.target="_blank";a.rel="noopener";a.href="https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent("Prince Edward Theatre, Old Compton Street, London")+"&destination="+encodeURIComponent(destination)+"&travelmode=walking";section.append(p,a);
+ }
+ const note=document.createElement("p");note.className="muted";note.textContent="Maps need an internet connection. Suggested walking routes are not confirmed step-free evacuation routes. Follow your PEEP and current venue instructions.";section.append(note);return section;
+}
+function normalisePetSearch(value){return value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();}
+function petSearchQuestions(query,questions){
+ const aliases={aed:"defibrillator",defib:"defibrillator",heart:"defibrillator",attack:"",cpr:"defibrillator",muster:"meeting",assembly:"meeting",bomb:"suspicious",phone:"phone",telephone:"phone"};
+ const words=normalisePetSearch(query).split(" ").filter(Boolean).map(w=>aliases[w]??w).filter(Boolean);
+ return questions.filter(q=>words.every(w=>normalisePetSearch(q.question+" "+q.answer+" "+q.category).includes(w)));
+}
+function createPetKnowledge(){
+ const section=document.createElement("section");section.className="pet-knowledge";
+ const title=document.createElement("h3");title.textContent="Find a briefing answer";
+ const intro=document.createElement("p");intro.textContent="Search words from your question or an everyday topic. Answers come from the PET briefing sheet and are available offline after the guide has loaded.";
+ const input=document.createElement("input");input.type="search";input.placeholder="Try defib, first aid, Stage Door…";input.setAttribute("aria-label","Search PET questions and answers");
+ 
+ const shortcuts=document.createElement("div");shortcuts.className="action-row";
+ for(const [label,value] of [["Defibrillator","defib"],["First aid","first aid"],["Stage Door","stage door"],["Muster points","meeting point"]])shortcuts.append(createButton(label,"text-action",()=>{input.value=value;draw();}));
+ const count=document.createElement("p");count.setAttribute("role","status");count.setAttribute("aria-live","polite");
+ const results=document.createElement("div");results.className="pet-answers";
+ const questions=state.data.petBriefing?.questions||[];
+ function draw(){
+  results.replaceChildren();
+  const found=petSearchQuestions(input.value,questions);count.textContent=found.length+" matching answers";
+  if(!found.length){const p=document.createElement("p");p.textContent="No matching answer. Try fewer words or a different term.";results.append(p);return;}
+  for(const q of found){const card=document.createElement("details");card.className="pet-answer";card.open=Boolean(input.value.trim());
+   const heading=document.createElement("summary");heading.textContent=q.question;
+   const a=document.createElement("p");a.className="pet-answer-text";a.textContent=q.answer;
+   const source=document.createElement("small");source.textContent="PET briefing sheet · "+q.category;
+   card.append(heading,a,source);
+   if(q.caution){const n=document.createElement("p");n.className="pet-caution";n.textContent=q.caution;card.append(n);if(q.reference){const link=document.createElement("a");link.href=q.reference;link.target="_blank";link.rel="noopener";link.textContent="ProtectUK guidance";card.append(link);}}
+   results.append(card);
+  }
+ }
+ input.addEventListener("input",draw);
+ section.append(title,intro,input,shortcuts,count,results);draw();return section;
+}
+
+function renderPetTrackNavigation(){
+ const nav=document.createElement("nav");nav.className="pet-track-nav";nav.setAttribute("aria-label","PET tracks");
+ for(const track of getTracksForTheatre()){
+  const access=getTrackAccessibility(track.id,state.profileId);const b=createButton(track.name,"pet-nav-tile "+statusClass(access.statusId),()=>{state.trackId=track.id;goToStep(4);});
+  b.setAttribute("aria-current",track.id===state.trackId?"page":"false");const badge=document.createElement("strong");badge.textContent=ragLabel(access.statusId);b.append(badge);nav.append(b);
+ }return nav;
 }

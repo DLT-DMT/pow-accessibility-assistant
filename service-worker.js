@@ -1,6 +1,6 @@
 importScripts("./version.js");
 
-const APP_VERSION = globalThis.POW_APP_VERSION || "4.0.1";
+const APP_VERSION = globalThis.POW_APP_VERSION || "4.1.0";
 const CACHE_NAME = `dmt-foh-shift-guide-${APP_VERSION}`;
 
 const APP_FILES = [
@@ -23,7 +23,6 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_FILES)),
   );
-  self.skipWaiting();
 });
 
 self.addEventListener("activate", (event) => {

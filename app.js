@@ -185,6 +185,9 @@ function render() {
     elements.workflow.append(renderSupportScreen());
   } else if (state.step === 4) {
     elements.workflow.append(renderShiftScreen());
+  } else if (state.step === 6 && isPet) {
+    const panel=createPanel("Briefing Quiz", "105 original questions and answers");
+    panel.append(createPetKnowledge());elements.workflow.append(panel);
   } else {
     elements.workflow.append(renderQuickReferenceScreen());
   }
@@ -194,13 +197,13 @@ function render() {
 
 function renderStepTabs() {
   elements.stepTabs.replaceChildren(
-    ...stepLabels.map((label, index) => {
+    ...(state.theatreId === "THR002" ? [...stepLabels,"Briefing Quiz"] : stepLabels).map((label, index) => {
       const stepNumber = index + 1;
       const button = document.createElement("button");
       button.type = "button";
       button.className = stepNumber === state.step ? "step-tab active" : "step-tab";
       button.textContent = label;
-      button.disabled = stepNumber > state.step && !(state.theatreId === "THR002" && stepNumber === 5);
+      button.disabled = stepNumber > state.step && !(state.theatreId === "THR002" && stepNumber >= 5);
       button.addEventListener("click", () => {
         state.step = stepNumber;
         render();
@@ -240,7 +243,7 @@ function renderTheatreScreen() {
     theatreList.append(button);
   });
 
-  if(state.theatreId === "THR002") panel.append(createButton("PET Quick Reference and briefing answers", "secondary-action", ()=>goToStep(5)));
+  if(state.theatreId === "THR002") panel.append(createButton("PET Quick Reference", "secondary-action", ()=>goToStep(5)));
   panel.append(theatreList, createActionRow([
     createButton("Continue", "primary-action", () => goToStep(2)),
   ]));
@@ -478,7 +481,7 @@ function renderTrackStatus(access) {
 function renderQuickReferenceScreen() {
   const panel = createPanel("Quick Reference", "Operational aide memoire");
   if(state.theatreId === "THR002") {
-    panel.append(createPetKnowledge(),createReferenceSection("PET code words",["Mr Jet — Fire","Mr Wick — Bomb / suspicious package","Mrs Green — Aggressive or disruptive patron; security will attend"]),createPetMusterPoints(),createPetContacts(),createPetReferenceFeedback(),createButton("Back to Shift","secondary-action",()=>goToStep(4)));return panel;
+    panel.append(createReferenceSection("PET code words",["Mr Jet — Fire","Mr Wick — Bomb / suspicious package","Mrs Green — Aggressive or disruptive patron; security will attend"]),createPetMusterPoints(),createPetContacts(),createPetReferenceCollection(),createButton("Back to Shift","secondary-action",()=>goToStep(4)));return panel;
   }
   panel.append(
     createReferenceSection("Calling 999", [
@@ -1087,6 +1090,11 @@ async function exportFeedback(downloadOnly=false){
 }
 
 function petReferenceData(){try{return JSON.parse(localStorage.getItem("dmt-pet-reference-v1")||"{}");}catch{return {};}}
+function createPetReferenceCollection(){
+ const details=document.createElement("details");
+ const title=document.createElement("summary");title.textContent="Add missing contact details or reference feedback";
+ details.append(title,createPetReferenceFeedback());return details;
+}
 function createPetReferenceFeedback(){
  const section=document.createElement("section");section.className="reference-section";
  const title=document.createElement("h3");title.textContent="Gather PET quick reference information";
@@ -1170,19 +1178,17 @@ function createPetKnowledge(){
  const title=document.createElement("h3");title.textContent="Find a briefing answer";
  const intro=document.createElement("p");intro.textContent="Search words from your question or an everyday topic. Answers come from the PET briefing sheet and are available offline after the guide has loaded.";
  const input=document.createElement("input");input.type="search";input.placeholder="Try defib, first aid, Stage Door…";input.setAttribute("aria-label","Search PET questions and answers");
- const modes=document.createElement("div");modes.className="action-row";let quiz=false;
- const reference=createButton("On-shift lookup","secondary-action",()=>{quiz=false;draw();});
- const briefing=createButton("Briefing quiz","secondary-action",()=>{quiz=true;draw();});modes.append(reference,briefing);
+ 
  const shortcuts=document.createElement("div");shortcuts.className="action-row";
  for(const [label,value] of [["Defibrillator","defib"],["First aid","first aid"],["Stage Door","stage door"],["Muster points","meeting point"]])shortcuts.append(createButton(label,"text-action",()=>{input.value=value;draw();}));
  const count=document.createElement("p");count.setAttribute("role","status");count.setAttribute("aria-live","polite");
  const results=document.createElement("div");results.className="pet-answers";
  const questions=state.data.petBriefing?.questions||[];
  function draw(){
-  reference.setAttribute("aria-pressed",String(!quiz));briefing.setAttribute("aria-pressed",String(quiz));results.replaceChildren();
+  results.replaceChildren();
   const found=petSearchQuestions(input.value,questions);count.textContent=found.length+" matching answers";
   if(!found.length){const p=document.createElement("p");p.textContent="No matching answer. Try fewer words or a different term.";results.append(p);return;}
-  for(const q of found){const card=document.createElement("details");card.className="pet-answer";card.open=Boolean(input.value.trim())&&!quiz;
+  for(const q of found){const card=document.createElement("details");card.className="pet-answer";card.open=Boolean(input.value.trim());
    const heading=document.createElement("summary");heading.textContent=q.question;
    const a=document.createElement("p");a.className="pet-answer-text";a.textContent=q.answer;
    const source=document.createElement("small");source.textContent="PET briefing sheet · "+q.category;
@@ -1192,7 +1198,7 @@ function createPetKnowledge(){
   }
  }
  input.addEventListener("input",draw);
- section.append(title,intro,modes,input,shortcuts,count,results);draw();return section;
+ section.append(title,intro,input,shortcuts,count,results);draw();return section;
 }
 
 function renderPetTrackNavigation(){

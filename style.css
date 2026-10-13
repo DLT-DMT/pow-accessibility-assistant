@@ -871,3 +871,6 @@ input:focus-visible,textarea:focus-visible,summary:focus-visible,a:focus-visible
 .pet-design .brand-row .eyebrow,.pet-design .brand-copy>p:first-child{color:#cfcee7;}
 
 .pet-design .top-bar .venue{color:#cfcee7;}
+
+.pet-design .step-tabs { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+@media(max-width:640px){.pet-design .step-tabs{grid-template-columns:repeat(3,minmax(0,1fr));}}
